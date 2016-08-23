@@ -1,0 +1,38 @@
+{
+  "name": "wedive/wedive-api",
+  "description": "Wedive api",
+  "license": "BSD-3-Clause",
+  "keywords": [
+      "framework",
+      "zf2",
+      "apigility",
+      "api",
+      "rest"
+  ],
+  "homepage": "https://github.com/strapieno/skeleton",
+  "require": {
+    "php": ">=5.4.0",
+    "zendframework/zendframework": "2.5.3",
+    "matryoshka-model/matryoshka": "0.8.*@dev",
+    "matryoshka-model/mongo-wrapper": "0.8.*@dev",
+    "matryoshka-model/zf2-matryoshka-module": "0.8.*@dev",
+    "matryoshka-model/zf-apigility-matryoshka": "dev-develop",
+    "ripaclub/aclman": "dev-develop@dev",
+    "strapieno/str-auth-api" : "dev-develop",
+    "strapieno/str-identity-api" : "dev-develop",
+    "strapieno/str-user-api" : "dev-develop",
+    "strapieno/str-user-avatar-api" : "dev-develop",
+    "strapieno/str-user-check-identity-api" : "dev-develop",
+    "strapieno/str-user-recover-password-api" : "dev-develop"
+  },
+  "require-dev": {
+  },
+  "authors": [
+    {
+      "name": "Antonio Visalli",
+      "email": "antonino.visalli@gmail.com",
+      "homepage": "http://github.com/visa4"
+    }
+  ],
+  "minimum-stability": "dev"
+}
