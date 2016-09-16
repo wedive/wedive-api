@@ -5,10 +5,12 @@ use Strapieno\Auth\Api\Authorization\AuthorizationListenerAggregate;
 use Strapieno\Utils\Listener\CorsListener;
 use Zend\EventManager\EventManagerInterface;
 use Zend\InputFilter\InputFilterPluginManager;
+use Zend\ModuleManager\Feature\ConsoleUsageProviderInterface;
 use Zend\Mvc\MvcEvent;
 use Zend\Stdlib\ArrayUtils;
+use Zend\Console\Adapter\AdapterInterface;
 
-class Module
+class Module implements ConsoleUsageProviderInterface
 {
     public function getConfig()
     {
@@ -43,6 +45,17 @@ class Module
                     __NAMESPACE__ => __DIR__ . '/src/',
                 ],
             ],
+        ];
+    }
+
+    public function getConsoleUsage(AdapterInterface $console)
+    {
+        return [
+            // Describe available commands
+            'test --path=<path> [--verbose|-v]' => 'Add oauth client entity',
+            // Describe expected parameters
+            [ '--path', 'Name of the client id'],
+            [ '--verbose|-v', '(optional) turn on verbose mode']
         ];
     }
 }

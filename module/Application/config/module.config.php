@@ -1,5 +1,26 @@
 <?php
+
 return [
+    'controllers' => [
+        'invokables' => [
+            'Application\TestController' => 'Application\TestController'
+        ]
+    ],
+    'console' => [
+        'router' => [
+            'routes' => [
+                'test' => [
+                    'options' => [
+                        'route'    => 'test --path=  [--verbose|-v]',
+                        'defaults' => [
+                            'controller' => 'Application\TestController',
+                            'action'     => 'test'
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ],
     'input_filters' => [
         'abstract_factories' => [
             'Strapieno\Utils\InputFilter\InputFilterAbstractServiceFactory',
