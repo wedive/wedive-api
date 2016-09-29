@@ -7,8 +7,10 @@ use Strapieno\Utils\Model\Object\Collection;
 /**
  * Class PlaceEntity
  */
-class PlaceEntity extends BasePlaceEntity
+class PlaceEntity extends BasePlaceEntity implements DiveInterface
 {
+    use DiveTrait;
+
     /**
      * @var Collection
      */
