@@ -1,7 +1,7 @@
 nginx:
   image: fntlnz/nginx:1.6.2
   volumes:
-    - docker/nginx/conf:/usr/local/nginx/conf
+    - /docker/nginx/conf:/usr/local/nginx/conf
     - .:/var/www/wedive-api
   ports:
     - "127.0.0.72:80:80"
@@ -14,7 +14,7 @@ nginx:
 fpm:
   build: docker/dockerfiles/php-fpm
   volumes:
-    - docker/php-fpm/etc:/usr/local/php/etc
+    - /docker/php-fpm/etc:/usr/local/php/etc
     - .:/var/www/wedive-api
   links:
     - mongo:mongo
@@ -22,6 +22,6 @@ fpm:
 mongo:
   image: mongo:3.0.4
   volumes:
-    - docker/mongo/data:/data/db
+    - /docker/mongo/data:/data/db
   ports:
     - "127.0.0.72:27017:27017"

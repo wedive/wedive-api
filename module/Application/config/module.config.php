@@ -1,26 +1,14 @@
 <?php
 
 return [
-    'controllers' => [
-        'invokables' => [
-            'Application\TestController' => 'Application\TestController'
-        ]
+    'imgman-apigility' => [
+        'imgman-connected' => [
+            'Strapieno\PlaceGallery\Api\V1\Rest\ConnectedResource' => [
+                'resource_class' => 'Application\ImgManConnectedResource'
+            ],
+        ],
     ],
-    'console' => [
-        'router' => [
-            'routes' => [
-                'test' => [
-                    'options' => [
-                        'route'    => 'test --path=  [--verbose|-v]',
-                        'defaults' => [
-                            'controller' => 'Application\TestController',
-                            'action'     => 'test'
-                        ]
-                    ]
-                ]
-            ]
-        ]
-    ],
+
     'input_filters' => [
         'abstract_factories' => [
             'Strapieno\Utils\InputFilter\InputFilterAbstractServiceFactory',

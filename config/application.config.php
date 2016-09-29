@@ -30,6 +30,10 @@ return array(
         'Strapieno\Identity\Api',
         'Strapieno\UserRecoverPassword\Api',
         'Strapieno\UserCheckIdentity\Api',
+        'Strapieno\Place\Model',
+        'Strapieno\Place\Api',
+        'Strapieno\PlaceGallery\Model',
+        'Strapieno\PlaceGallery\Api',
         'Application',
     ),
     'module_listener_options' => array(

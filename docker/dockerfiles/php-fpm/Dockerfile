@@ -57,7 +57,7 @@ WORKDIR /tmp
 # image magick
 RUN mkdir -p imagemagick
 WORKDIR imagemagick
-RUN wget -nv -O - http://www.imagemagick.org/download/ImageMagick-6.9.5-7.tar.gz | tar zx --strip-components 1
+RUN wget -nv -O - http://www.imagemagick.org/download/ImageMagick-6.9.5-10.tar.gz | tar zx --strip-components 1
 RUN ./configure
 RUN make -j
 RUN make install

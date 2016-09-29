@@ -23,7 +23,9 @@
     "strapieno/str-user-api" : "dev-develop",
     "strapieno/str-user-avatar-api" : "dev-develop",
     "strapieno/str-user-check-identity-api" : "dev-develop",
-    "strapieno/str-user-recover-password-api" : "dev-develop"
+    "strapieno/str-user-recover-password-api" : "dev-develop",
+    "strapieno/str-place-api" : "dev-develop",
+    "strapieno/str-place-gallery-api" : "dev-develop"
   },
   "require-dev": {
   },

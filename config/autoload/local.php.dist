@@ -12,16 +12,21 @@
  */
 
 return [
-    'zf-oauth2' => [
-        'mongo' => [
-            'database' => 'strapieno',
-            'dsn' => 'mongo:27017', // For docker
-        ],
-    ],
-    'mongodb' => [
-        'Mongo\Db' => [
-            'hosts' => 'mongo:27017', // For docker
-            'database' => 'strapieno',
-        ],
-    ],
+      'zf-oauth2' => [
+           'mongo' => [
+               'database' => 'wedive',
+               'dsn' => 'mongo:27017', // For docker
+           ],
+       ],
+       'mongodb' => [
+           'Mongo\Db' => [
+               'hosts' => 'mongo:27017', // For docker
+               'database' => 'strapieno',
+           ],
+       ],
+       'imgman_mongodb' => [
+           'Mongo\Db\Image' => [
+               'hosts' => 'mongo:27017', // For docker
+           ],
+       ],
 ];
