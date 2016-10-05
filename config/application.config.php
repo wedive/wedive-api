@@ -32,6 +32,8 @@ return array(
         'Strapieno\UserCheckIdentity\Api',
         'Strapieno\Place\Model',
         'Strapieno\Place\Api',
+        'Strapieno\PlaceCover\Model',
+        'Strapieno\PlaceCover\Api',
         'Strapieno\PlaceGallery\Model',
         'Strapieno\PlaceGallery\Api',
         'Application',
