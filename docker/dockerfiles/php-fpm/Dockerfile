@@ -54,6 +54,7 @@ RUN make install
 
 WORKDIR /tmp
 
+
 # image magick
 RUN mkdir -p imagemagick
 WORKDIR imagemagick
