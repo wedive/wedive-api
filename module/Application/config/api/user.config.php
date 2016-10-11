@@ -7,7 +7,7 @@ return [
     ],
     'matryoshka-objects' => [
         'User' => [
-            'type' => 'Application\Entity\UserEntity',
+            'type' => 'Application\User\Entity\UserEntity',
             'active_record_criteria' => 'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria',
             'hydrator' => 'UserApiHydrator'
         ],
@@ -22,4 +22,59 @@ return [
             ],
         ],
     ],
+
+    'zf-content-validation' => [
+        'Strapieno\User\Api\V1\Rest\Controller' => [
+            'POST' => 'Application\User\Api\InputFilter\PostInputFilter',
+        ]
+    ],
+
+    'strapieno-array-validators' => [
+        'UserTypesValidator' => [
+            'name_key_array_config' => 'UserTypes'
+        ]
+    ],
+    'UserTypes' => [
+        'diver',
+            'diverOwner'
+    ],
+    'strapieno_input_filter_specs' => [
+        'Strapieno\User\Model\InputFilter\DefaultInputFilter' => [
+            'type' => [
+                'name' => 'type',
+                'require' => false,
+                'allow_empty' => true,
+                'filters' => [
+                    'stringtrim' => [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validators' => [
+                    'UserTypesValidator' => [
+                        'name' => 'UserTypesValidator',
+                        'break_chain_on_failure' => true
+                    ]
+                ]
+            ],
+        ],
+        'Application\User\Api\InputFilter\PostInputFilter' => [
+            'merge' => 'Strapieno\User\Model\InputFilter\DefaultInputFilter',
+            'email' => [
+                'require' => true,
+                'allow_empty' => false,
+                'name' => 'email',
+                'validators' => [
+                    'user-emailunique' => [
+                        'name' => 'user-emailunique',
+                        'break_chain_on_failure' => true
+                    ]
+                ]
+            ],
+            'type' => [
+                'require' => true,
+                'allow_empty' => false,
+                'name' => 'type'
+            ],
+        ]
+    ]
 ];
