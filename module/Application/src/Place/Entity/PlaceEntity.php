@@ -2,14 +2,17 @@
 namespace Application\Place\Entity;
 
 use Strapieno\Place\Model\Entity\PlaceEntity as BasePlaceEntity;
+use Strapieno\PlaceCover\Model\Entity\CoverAwareInterface;
+use Strapieno\PlaceCover\Model\Entity\CoverAwareTrait;
 use Strapieno\Utils\Model\Object\Collection;
 
 /**
  * Class PlaceEntity
  */
-class PlaceEntity extends BasePlaceEntity implements DiveInterface
+class PlaceEntity extends BasePlaceEntity implements DiveInterface, CoverAwareInterface
 {
     use DiveTrait;
+    use CoverAwareTrait;
 
     /**
      * @var Collection
