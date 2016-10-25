@@ -30,7 +30,7 @@ return [
     ],
     'session_save_handler_mongo' => [
         'hosts' => 'mongo:27017',
-        'database'   => 'strapieno-sessions',
+        'database'   => 'wedives-sessions',
         'collection' => 'sessions',
     ],
     'zf-oauth2' => [
@@ -45,7 +45,7 @@ return [
     ],
     'mongodb' => [
         'Mongo\Db' => [
-            'database' => 'strapieno',
+            'database' => 'wedives',
         ],
     ],
 ];

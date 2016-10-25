@@ -21,11 +21,12 @@ return [
        'mongodb' => [
            'Mongo\Db' => [
                'hosts' => 'mongo:27017', // For docker
-               'database' => 'strapieno',
+               'database' => 'wedives',
            ],
        ],
        'imgman_mongodb' => [
            'Mongo\Db\Image' => [
+                'database' => 'wedives',
                'hosts' => 'mongo:27017', // For docker
            ],
        ],
