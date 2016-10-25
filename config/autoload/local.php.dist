@@ -12,22 +12,28 @@
  */
 
 return [
-      'zf-oauth2' => [
-           'mongo' => [
-               'database' => 'wedive',
-               'dsn' => 'mongo:27017', // For docker
-           ],
-       ],
-       'mongodb' => [
-           'Mongo\Db' => [
-               'hosts' => 'mongo:27017', // For docker
-               'database' => 'wedives',
-           ],
-       ],
-       'imgman_mongodb' => [
-           'Mongo\Db\Image' => [
-                'database' => 'wedives',
-               'hosts' => 'mongo:27017', // For docker
-           ],
-       ],
+    'session_config' => [
+        'cookie_domain'         => 'yourdomain.com',
+    ],
+    'session_manager' => [
+        'enable_default_container_manager' => true,
+    ],
+    'zf-oauth2' => [
+         'mongo' => [
+             'database' => 'wedive',
+             'dsn' => 'mongo:27017',   // For docker
+         ],
+     ],
+     'mongodb' => [
+         'Mongo\Db' => [
+             'hosts' => 'mongo:27017', // For docker
+             'database' => 'wedives',
+         ],
+     ],
+     'imgman_mongodb' => [
+         'Mongo\Db\Image' => [
+             'database' => 'wedives',
+             'hosts' => 'mongo:27017', // For docker
+         ],
+     ],
 ];
