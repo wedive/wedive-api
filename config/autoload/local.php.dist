@@ -20,7 +20,7 @@ return [
     ],
     'zf-oauth2' => [
          'mongo' => [
-             'database' => 'wedive',
+             'database' => 'wedives',
              'dsn' => 'mongo:27017',   // For docker
          ],
      ],
