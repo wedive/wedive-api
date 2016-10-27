@@ -7,7 +7,7 @@ return [
     ],
     'matryoshka-objects' => [
         'User' => [
-            'type' => 'Application\User\Entity\UserEntity',
+            'type' => 'Application\User\Entity\DiverEntity',
             'active_record_criteria' => 'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria',
             'hydrator' => 'UserApiHydrator'
         ],
@@ -36,7 +36,7 @@ return [
     ],
     'UserTypes' => [
         'diver',
-            'diverOwner'
+        'diverOwner'
     ],
     'strapieno_input_filter_specs' => [
         'Strapieno\User\Model\InputFilter\DefaultInputFilter' => [
@@ -53,6 +53,25 @@ return [
                     'UserTypesValidator' => [
                         'name' => 'UserTypesValidator',
                         'break_chain_on_failure' => true
+                    ]
+                ]
+            ],
+            'comment' => [
+                'name' => 'comment',
+                'require' => false,
+                'allow_empty' => true,
+                'filters' => [
+                    'stringtrim' => [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validators' => [
+                    'between' => [
+                        'name' => 'between',
+                        'options' => [
+                            'min' => 200,
+                            'max' => 2000
+                        ]
                     ]
                 ]
             ],
@@ -74,6 +93,11 @@ return [
                 'require' => true,
                 'allow_empty' => false,
                 'name' => 'type'
+            ],
+            'comment' => [
+                'require' => true,
+                'allow_empty' => false,
+                'name' => 'comment'
             ],
         ]
     ]

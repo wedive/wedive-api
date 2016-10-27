@@ -1,0 +1,26 @@
+<?php
+var_dump('test'); die();
+return [
+    'aclman_storage' => [
+        'Authogility\MvcAuth\Authorization\AclManager\Storage' => [
+            'roles' => [
+                // Permission for all roles
+                \AclMan\Storage\StorageInterface::ALL_ROLES => [
+                    'resources' => [
+                        \AclMan\Storage\StorageInterface::ALL_RESOURCES => [
+                            [
+                                'allow' => false,
+                            ],
+                        ],
+                    ]
+                ],
+                // Role diver
+                'diver' => [
+                    'parents' => [
+                        'guest'
+                    ],
+                ],
+            ],
+        ],
+    ],
+];

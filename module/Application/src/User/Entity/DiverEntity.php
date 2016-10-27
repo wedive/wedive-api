@@ -8,9 +8,9 @@ use Strapieno\UserAvatar\Model\Entity\UserAvatarAwareInterface;
 use Strapieno\UserAvatar\Model\Entity\UserAvatarAwareTrait;
 
 /**
- * Class UserEntity
+ * Class DiverEntity
  */
-class UserEntity extends BaseUserEntity implements AvatarAwareInterface
+class DiverEntity extends BaseUserEntity implements AvatarAwareInterface
 {
     use AvatarAwareTrait;
 
@@ -18,6 +18,11 @@ class UserEntity extends BaseUserEntity implements AvatarAwareInterface
      * @var string
      */
     protected $type;
+
+    /**
+     * @var string
+     */
+    protected $comment;
 
     /**
      * @return string
@@ -35,5 +40,32 @@ class UserEntity extends BaseUserEntity implements AvatarAwareInterface
         $this->type = $type;
     }
 
+    /**
+     * @return string
+     */
+    public function getRoleId()
+    {
+        if (!$this->roleId) {
+            $this->roleId = 'diver';
+        }
+        return $this->roleId;
+    }
 
+    /**
+     * @return string
+     */
+    public function getComment()
+    {
+        return $this->comment;
+    }
+
+    /**
+     * @param string $comment
+     * @return $this
+     */
+    public function setComment(string $comment)
+    {
+        $this->comment = $comment;
+        return $this;
+    }
 }

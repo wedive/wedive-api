@@ -32,7 +32,7 @@ return [
      ],
      'imgman_mongodb' => [
          'Mongo\Db\Image' => [
-             'database' => 'wedives',
+             'database' => 'wedives_image',
              'hosts' => 'mongo:27017', // For docker
          ],
      ],
