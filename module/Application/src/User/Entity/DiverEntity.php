@@ -63,7 +63,7 @@ class DiverEntity extends BaseUserEntity implements AvatarAwareInterface
      * @param string $comment
      * @return $this
      */
-    public function setComment(string $comment)
+    public function setComment($comment)
     {
         $this->comment = $comment;
         return $this;
