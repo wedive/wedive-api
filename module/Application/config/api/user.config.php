@@ -66,11 +66,11 @@ return [
                     ]
                 ],
                 'validators' => [
-                    'between' => [
-                        'name' => 'between',
+                    'stringlength' => [
+                        'name' => 'stringlength',
                         'options' => [
-                            'min' => 200,
-                            'max' => 2000
+                            'min' => 40,
+                            'max' => 1000
                         ]
                     ]
                 ]
