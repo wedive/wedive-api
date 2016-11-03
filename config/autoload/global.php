@@ -37,6 +37,9 @@ return [
         'mongo' => [
             'dsn' => 'mongo:27017',
         ],
+        'storage_settings' => [
+            'identity_field' => 'email'
+        ],
         // https://apigility.org/documentation/auth/authentication-oauth2
         'options' => [
             'always_issue_new_refresh_token' => true, // zf2 default is false

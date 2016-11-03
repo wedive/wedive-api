@@ -9,6 +9,7 @@ use Strapieno\PlaceGallery\Model\Entity\Reference\GalleryReference;
 use Strapieno\Utils\Hydrator\Strategy\NamingStrategy\MapUnderscoreNamingStrategy;
 use Strapieno\Utils\Hydrator\Strategy\ReferenceEntityCompressStrategy;
 use Strapieno\Utils\Model\Object\Collection;
+use Strapieno\Utils\Model\Object\MediaReference\MediaReference;
 use Zend\Hydrator\Filter\FilterComposite;
 use Zend\Stdlib\Hydrator\Filter\MethodMatchFilter;
 
@@ -21,9 +22,7 @@ class PlaceHydrator extends BasePlaceHydrator
     {
         parent::__construct($underscoreSeparatedKeys);
 
-
-
-        $media = new Media();
+        $media = new MediaReference();
 
         $media->getHydrator()->setNamingStrategy(
             new MapUnderscoreNamingStrategy(['gallery_id' => 'galleryReference'])
@@ -36,12 +35,12 @@ class PlaceHydrator extends BasePlaceHydrator
         );
 
         $media->getHydrator()->addStrategy(
-            'gallery_id',
+            'entity_reference',
             new ReferenceEntityCompressStrategy(new GalleryReference(), false)
         );
 
         $this->addStrategy(
-            'media',
+            'collection',
             new HasManyStrategy(
                 $media,
                 new Collection(),

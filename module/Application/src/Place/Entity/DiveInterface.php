@@ -1,5 +1,6 @@
 <?php
 namespace Application\Place\Entity;
+use Strapieno\Utils\Model\Object\Collection;
 
 /**
  * Interface DiveInterface
