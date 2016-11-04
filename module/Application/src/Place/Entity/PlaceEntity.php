@@ -17,4 +17,14 @@ class PlaceEntity extends BasePlaceEntity implements DiveInterface, CoverAwareIn
     use CoverAwareTrait;
     use CollectionAwareTrait;
 
+    /**
+     * @return Collection|\Strapieno\Utils\Model\Object\CollectionInterface
+     */
+    public function getCollection()
+    {
+        if (!$this->collection) {
+            $this->collection = new Collection();
+        }
+        return $this->collection;
+    }
 }
