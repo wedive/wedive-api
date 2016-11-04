@@ -1,5 +1,4 @@
 <?php
-var_dump('test'); die();
 return [
     'aclman_storage' => [
         'Authogility\MvcAuth\Authorization\AclManager\Storage' => [
