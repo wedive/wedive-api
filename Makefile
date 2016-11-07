@@ -32,4 +32,10 @@ install: install-composer dcu
 	docker exec -it skeleton_fpm_1 bash -c 'cd str-skeleton && php ./vendor/bin/str-auth-model.php add-client --clientId=${CLIENT_ID} OauthClient'
 
 sync-prod:
-	 rsync -avh ./ ../${PROD_SYNC_FOLDER}/ --delete
+	 rsync -avh ./ ../${PROD_SYNC_FOLDER}/ --deleteq
+
+	 q
+
+	 fq
+
+
