@@ -12,28 +12,25 @@
  */
 
 return [
-    'session_config' => [
-        'cookie_domain'         => 'yourdomain.com',
-    ],
-    'session_manager' => [
-        'enable_default_container_manager' => true,
-    ],
-    'zf-oauth2' => [
-         'mongo' => [
-             'database' => 'wedives_dev',
-             'dsn' => 'mongo:27017',   // For docker
-         ],
-     ],
-     'mongodb' => [
-         'Mongo\Db' => [
-             'hosts' => 'mongo:27017', // For docker
-             'database' => 'wedives_dev',
-         ],
-     ],
-     'imgman_mongodb' => [
-         'Mongo\Db\Image' => [
-             'database' => 'wedives_image_dev',
-             'hosts' => 'mongo:27017', // For docker
-         ],
-     ],
+      'zf-oauth2' => [
+           'mongo' => [
+               'dsn' => 'mongo:27017', // For docker
+               'database' => 'wedives_dev',
+               //'database' => 'wedives',
+           ],
+       ],
+       'mongodb' => [
+           'Mongo\Db' => [
+               'hosts' => 'mongo:27017', // For docker
+               'database' => 'wedives_dev',
+               //'database' => 'wedives',
+           ],
+       ],
+       'imgman_mongodb' => [
+           'Mongo\Db\Image' => [
+               'hosts' => 'mongo:27017', // For docker
+               'database' => 'wedives_image_dev',
+               //'database' => 'wedives_image',
+           ],
+       ],
 ];
