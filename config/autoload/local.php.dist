@@ -20,19 +20,19 @@ return [
     ],
     'zf-oauth2' => [
          'mongo' => [
-             'database' => 'wedives',
+             'database' => 'wedives_dev',
              'dsn' => 'mongo:27017',   // For docker
          ],
      ],
      'mongodb' => [
          'Mongo\Db' => [
              'hosts' => 'mongo:27017', // For docker
-             'database' => 'wedives',
+             'database' => 'wedives_dev',
          ],
      ],
      'imgman_mongodb' => [
          'Mongo\Db\Image' => [
-             'database' => 'wedives_image',
+             'database' => 'wedives_image_dev',
              'hosts' => 'mongo:27017', // For docker
          ],
      ],

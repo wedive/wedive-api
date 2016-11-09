@@ -1,7 +1,7 @@
 <?php
 return [
     'aclman_storage' => [
-        'Authogility\MvcAuth\Authorization\AclManager\Storage' => [
+        'Strapieno\Auth\AclMan\Storage' => [
             'roles' => [
                 // Permission for all roles
                 \AclMan\Storage\StorageInterface::ALL_ROLES => [
