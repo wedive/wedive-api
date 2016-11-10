@@ -1,7 +1,7 @@
 <?php
 return [
     // TODO move it in model project
-    'RolesTypes' => [
+    'UserRoleTypes' => [
         'guest',
         'god'
     ],
