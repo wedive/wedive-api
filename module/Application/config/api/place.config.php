@@ -17,6 +17,7 @@ return [
     ],
     'zf-content-validation' => [
         'Strapieno\Place\Api\V1\Rest\Controller'  => [
+            'input_filter' => 'Strapieno\Place\Model\InputFilter\DefaultInputFilter',
             'POST' => 'Application\Place\Api\InputFilter\PostInputFilter'
         ]
     ],
@@ -29,25 +30,53 @@ return [
                 'require' => true,
                 'allow_empty' => false
             ],
+            'geo_coordinate' => [
+                'name' => 'geo_coordinate',
+                'type' => 'Strapieno\Place\Api\InputFilter\PostGeoCoordiateInputFilter'
+
+            ],
+            "visibility" => [
+                'name' => 'visibility',
+                'require' => true,
+                'allow_empty' => false
+            ],
+            "max_depth" => [
+                'name' => 'max_depth',
+                'require' => true,
+                'allow_empty' => false
+            ],
+            'current' => [
+                'name' => 'current',
+                'require' => true,
+                'allow_empty' => false
+            ],
             "description" => [
                 'name' => 'description',
                 'require' => true,
                 'allow_empty' => false
             ],
-            'max_depth' => [
-                'name' => 'max_depth',
-                'require' => true,
-                'allow_empty' => false
-            ],
-            "visibility" =>[
-                'name' => 'visibility',
-                'require' => true,
-                'allow_empty' => false
-            ],
-            'geo_coordinate' => [
-                'name' => 'geo_coordinate',
-                'type' => 'Strapieno\Place\Api\InputFilter\PostGeoCoordiateInputFilter'
+        ],
 
+        'Strapieno\Place\Model\InputFilter\DefaultInputFilter' => [
+            "visibility" => [
+                'name' => 'visibility',
+                'require' => false,
+                'allow_empty' => true
+            ],
+            "max_depth" => [
+                'name' => 'max_depth',
+                'require' => false,
+                'allow_empty' => true
+            ],
+            'current' => [
+                'name' => 'current',
+                'require' => false,
+                'allow_empty' => true
+            ],
+            "description" => [
+                'name' => 'description',
+                'require' => false,
+                'allow_empty' => true
             ],
         ]
     ]
