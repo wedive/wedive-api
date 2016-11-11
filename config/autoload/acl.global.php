@@ -26,7 +26,15 @@ return [
                 'diver' => [
                     'parents' => [
                         'guest'
-                    ]
+                    ],
+                    'Strapieno\User\Api\V1\Rest\Controller::collection' => [
+                        [
+                            'allow' => false,
+                            'privileges' => [
+                                'POST'
+                            ]
+                        ]
+                    ],
                 ],
                 'guest' => [
                     'resources' => [
