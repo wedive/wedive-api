@@ -22,16 +22,6 @@ return [
                         ]
                     ]
                 ],
-                // God diver
-                'god' => [
-                    'resources' => [
-                        \AclMan\Storage\StorageInterface::ALL_RESOURCES => [
-                            [
-                                'allow' => true,
-                            ]
-                        ]
-                    ]
-                ],
                 // Role diver
                 'diver' => [
                     'parents' => [
@@ -46,6 +36,15 @@ return [
                                 'allow' => true,
                                 'privileges' => [
                                     'POST'
+                                ]
+                            ]
+                        ],
+                        // TODO remove add only to view the <img> tag on client
+                        'Strapieno\UserAvatar\Api\V1\Rest\Controller::entity' => [
+                            [
+                                'allow' => true,
+                                'privileges' => [
+                                    'GET'
                                 ]
                             ]
                         ],
