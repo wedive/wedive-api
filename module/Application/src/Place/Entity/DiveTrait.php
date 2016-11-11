@@ -22,6 +22,11 @@ trait DiveTrait
     protected $visibility;
 
     /**
+     * @var int
+     */
+    protected $current;
+
+    /**
      * @var array
      */
     protected $badges;
@@ -72,6 +77,24 @@ trait DiveTrait
     public function setVisibility($visibility)
     {
         $this->visibility = $visibility;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCurrent()
+    {
+        return $this->current;
+    }
+
+    /**
+     * @param int $current
+     * @return $this
+     */
+    public function setCurrent($current)
+    {
+        $this->current = $current;
+        return $this;
     }
 
     /**

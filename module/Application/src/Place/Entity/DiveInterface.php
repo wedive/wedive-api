@@ -38,6 +38,16 @@ interface DiveInterface
     public function setVisibility($visibility);
 
     /**
+     * @return int
+     */
+    public function getCurrent();
+
+    /**
+     * @param int $current
+     * @return $this
+     */
+    public function setCurrent($current);
+    /**
      * @return array
      */
     public function getBadges();
