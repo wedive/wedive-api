@@ -2,7 +2,7 @@
 return [
     // TODO move it in model project
     'UserRoleTypes' => [
-        'guest',
+        'diver',
         'god'
     ],
     'matryoshka-objects' => [
