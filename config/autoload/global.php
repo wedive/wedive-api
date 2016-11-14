@@ -34,9 +34,6 @@ return [
         'collection' => 'sessions',
     ],
     'zf-oauth2' => [
-        'mongo' => [
-            'dsn' => 'mongo:27017',
-        ],
         'storage_settings' => [
             'identity_field' => 'email'
         ],
