@@ -1,4 +1,8 @@
 <?php
+use Strapieno\Utils\InputFilter\ArrayInput;
+use Zend\InputFilter\InputFilter;
+use Zend\InputFilter\Input;
+
 
 return [
     'imgman-apigility' => [
@@ -14,8 +18,9 @@ return [
             'Strapieno\Utils\InputFilter\InputFilterAbstractServiceFactory',
         ],
         'invokables' => [
-            'Zend\InputFilter\InputFilter' => 'Zend\InputFilter\InputFilter',
-            'Zend\InputFilter\Input' => 'Zend\InputFilter\Input'
+            InputFilter::class => InputFilter::class,
+            ArrayInput::class =>  ArrayInput::class,
+            Input::class => Input::class
         ]
     ],
     'view_manager'          => [

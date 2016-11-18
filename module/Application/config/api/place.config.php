@@ -21,6 +21,17 @@ return [
             'POST' => 'Application\Place\Api\InputFilter\PostInputFilter'
         ]
     ],
+    'BadgesPlace' => [
+        'cave',
+        'wall',
+        'fish',
+        'wreck'
+    ],
+    'strapieno-array-validators' => [
+        'BadgesPlaceValidator' => [
+            'name_key_array_config' => 'BadgesPlace'
+        ]
+    ],
     // TODO revrite default input filter
     'strapieno_input_filter_specs' => [
         'Application\Place\Api\InputFilter\PostInputFilter' => [
@@ -78,6 +89,16 @@ return [
                 'require' => false,
                 'allow_empty' => true
             ],
+            'badges' => [
+                'name' => 'badges',
+                'require' => false,
+                'type' => \Strapieno\Utils\InputFilter\ArrayInput::class,
+                'validators' => [
+                    0 => [
+                        'name' => 'BadgesPlaceValidator'
+                    ],
+                ],
+            ]
         ]
     ]
 ];
