@@ -72,17 +72,51 @@ return [
             "visibility" => [
                 'name' => 'visibility',
                 'require' => false,
-                'allow_empty' => true
+                'allow_empty' => true,
+                'validators' => [
+                    0 => [
+                        'name' => 'digits'
+                    ],
+                    1 => [
+                        'name' => 'between',
+                        'options' => [
+                            'min' => 0,
+                            'max' => 10
+                        ]
+                    ],
+                ],
             ],
             "max_depth" => [
                 'name' => 'max_depth',
                 'require' => false,
-                'allow_empty' => true
+                'allow_empty' => true,
+                'validators' => [
+                    0 => [
+                        'name' => 'digits'
+                    ],
+                    1 => [
+                        'name' => 'between',
+                        'options' => [
+                            'min' => 0,
+                            'max' => 10
+                        ]
+                    ],
+                ],
             ],
             'current' => [
                 'name' => 'current',
                 'require' => false,
-                'allow_empty' => true
+                'allow_empty' => true,
+                0 => [
+                    'name' => 'digits'
+                ],
+                1 => [
+                    'name' => 'between',
+                    'options' => [
+                        'min' => 0,
+                        'max' => 200
+                    ]
+                ],
             ],
             "description" => [
                 'name' => 'description',
