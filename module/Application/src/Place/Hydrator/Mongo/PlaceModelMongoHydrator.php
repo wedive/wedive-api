@@ -1,8 +1,10 @@
 <?php
 namespace Application\Place\Hydrator\Mongo;
 
+use Application\Place\Hydrator\Mongo\Strategy\GeoStrategy;
 use Matryoshka\Model\Hydrator\Strategy\HasManyStrategy;
 use Matryoshka\Model\Hydrator\Strategy\HasOneStrategy;
+use Strapieno\Place\Model\Entity\Object\GeoCoordinateObject;
 use Strapieno\Place\Model\Hydrator\Mongo\PlaceModelMongoHydrator as BasePlaceModelMongoHydrator;
 use Strapieno\PlaceGallery\Model\Entity\Reference\GalleryReference;
 use Strapieno\Utils\Model\Object\Collection;
@@ -21,6 +23,12 @@ class PlaceModelMongoHydrator extends BasePlaceModelMongoHydrator
         parent::__construct($underscoreSeparatedKeys);
 
         $media = new MediaReference();
+
+        $this->removeStrategy('geo_coordinate');
+        $this->addStrategy(
+            'geo_coordinate',
+            new GeoStrategy(new GeoCoordinateObject(), false)
+        );
 
         $media->getHydrator()->filterComposite->addFilter(
             'refIdentity',

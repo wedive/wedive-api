@@ -98,7 +98,7 @@ return [
                         'name' => 'between',
                         'options' => [
                             'min' => 0,
-                            'max' => 10
+                            'max' => 200
                         ]
                     ],
                 ],
@@ -107,15 +107,17 @@ return [
                 'name' => 'current',
                 'require' => false,
                 'allow_empty' => true,
-                0 => [
-                    'name' => 'digits'
-                ],
-                1 => [
-                    'name' => 'between',
-                    'options' => [
-                        'min' => 0,
-                        'max' => 200
-                    ]
+                'validators' => [
+                    0 => [
+                        'name' => 'digits'
+                    ],
+                    1 => [
+                        'name' => 'between',
+                        'options' => [
+                            'min' => 0,
+                            'max' => 10
+                        ]
+                    ],
                 ],
             ],
             "description" => [
