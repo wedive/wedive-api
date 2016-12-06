@@ -14,11 +14,13 @@
     "php": ">=5.4.0",
     "zendframework/zendframework": "2.5.3",
     "ircmaxell/random-lib": "1.1.0",
+    "mandrill/mandrill": "~1.0.54",
     "matryoshka-model/matryoshka": "0.8.*@dev",
     "matryoshka-model/mongo-wrapper": "0.8.*@dev",
     "matryoshka-model/zf2-matryoshka-module": "0.8.*@dev",
     "matryoshka-model/zf-apigility-matryoshka": "dev-develop",
     "ripaclub/aclman": "dev-develop@dev",
+    "ripaclub/zf2-mailman": "~0.3.2",
     "strapieno/str-auth-api" : "dev-develop",
     "strapieno/str-identity-api" : "dev-develop",
     "strapieno/str-user-api" : "dev-develop",
@@ -27,7 +29,8 @@
     "strapieno/str-user-recover-password-api" : "dev-develop",
     "strapieno/str-place-api" : "dev-develop",
     "strapieno/str-place-cover-api" : "dev-develop",
-    "strapieno/str-place-gallery-api" : "dev-develop"
+    "strapieno/str-place-gallery-api" : "dev-develop",
+    "strapieno/str-dive-log-api" : "dev-develop"
   },
   "require-dev": {
   },

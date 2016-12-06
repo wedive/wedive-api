@@ -36,6 +36,9 @@ return array(
         'Strapieno\PlaceCover\Api',
         'Strapieno\PlaceGallery\Model',
         'Strapieno\PlaceGallery\Api',
+        'Strapieno\DiveLog\Model',
+        'Strapieno\DiveLog\Api',
+        'MailMan',
         'Application',
     ),
     'module_listener_options' => array(

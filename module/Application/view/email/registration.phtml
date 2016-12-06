@@ -1,0 +1,5 @@
+<?php /** @var $user \Strapieno\Utils\Model\Entity\IdentityExistAwareInterface */ ?>
+<?= $this->partial('email/layout/header'); ?>
+    Benvenuto su wedives il portare per gli appasionati di subacqua. <br>
+    Per completare la tua registrazione <a href="<?= $this->url('client/confirm-email', ['token' => $user->getIdentityExistToken()]); ?>">clicca qui</a> buon mare.
+<?= $this->partial('email/layout/footer'); ?>

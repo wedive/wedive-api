@@ -48,4 +48,39 @@ return [
             'database' => 'wedives',
         ],
     ],
+    'router' => [
+        'routes' => [
+            'client' => [
+                'type' => 'Hostname',
+                'options' => [
+                    'route' => 'www.wedives.com',
+                ],
+                'may_terminate' => true,
+                'child_routes' => [
+                    'confirm-email' => [
+                        'type' => 'Segment',
+                        'options' => [
+                            'route' => '/confirm-email/:token',
+                        ],
+                    ],
+                    'reset-password' => [
+                        'type' => 'Segment',
+                        'options' => [
+                            'route' => '/reset-password/:token',
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
+    'mailman' => [
+        'MailMan\Service\MailInterface' => [
+            'additional_info' => [
+            ],
+            'transport' => [
+                'type' => 'mandrill',
+                'options' => [],
+            ],
+        ],
+    ],
 ];

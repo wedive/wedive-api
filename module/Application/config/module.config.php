@@ -3,7 +3,6 @@ use Strapieno\Utils\InputFilter\ArrayInput;
 use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\Input;
 
-
 return [
     'imgman-apigility' => [
         'imgman-connected' => [

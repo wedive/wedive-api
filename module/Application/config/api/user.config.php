@@ -1,6 +1,5 @@
 <?php
 return [
-    // TODO move it in model project
     'UserRoleTypes' => [
         'diver',
         'god'
@@ -40,19 +39,25 @@ return [
     ],
     'strapieno_input_filter_specs' => [
         'Strapieno\User\Model\InputFilter\DefaultInputFilter' => [
-            'type' => [
-                'name' => 'type',
-                'require' => false,
-                'allow_empty' => true,
-                'filters' => [
-                    'stringtrim' => [
-                        'name' => 'stringtrim',
-                    ]
-                ],
+            'email' => [
                 'validators' => [
-                    'UserTypesValidator' => [
-                        'name' => 'UserTypesValidator',
-                        'break_chain_on_failure' => true
+                    'stringlength' => [
+                        'name' => 'stringlength',
+                        'options' => [
+                            'min' => 0,
+                            'max' => 50
+                        ]
+                    ]
+                ]
+            ],
+            'user_name' => [
+                'validators' => [
+                    'stringlength' => [
+                        'name' => 'stringlength',
+                        'options' => [
+                            'min' => 0,
+                            'max' => 30
+                        ]
                     ]
                 ]
             ],
@@ -89,15 +94,15 @@ return [
                     ]
                 ]
             ],
-            'type' => [
+            'user_name' => [
                 'require' => true,
                 'allow_empty' => false,
-                'name' => 'type'
+                'name' => 'user_name'
             ],
-            'comment' => [
+            'password' => [
                 'require' => true,
                 'allow_empty' => false,
-                'name' => 'comment'
+                'name' => 'password'
             ],
         ]
     ]
