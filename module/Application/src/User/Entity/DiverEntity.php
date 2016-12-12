@@ -16,7 +16,7 @@ class DiverEntity extends BaseUserEntity implements AvatarAwareInterface
 {
     use AvatarAwareTrait;
 
-    const LIST_CHARACTERS = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789-_><';
+    const LIST_CHARACTERS = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789-_';
 
     /**
      * @var string
