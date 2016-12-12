@@ -6,6 +6,8 @@ use Strapieno\UserAvatar\Model\Entity\AvatarAwareInterface;
 use Strapieno\UserAvatar\Model\Entity\AvatarAwareTrait;
 use Strapieno\UserAvatar\Model\Entity\UserAvatarAwareInterface;
 use Strapieno\UserAvatar\Model\Entity\UserAvatarAwareTrait;
+use Strapieno\Utils\Model\Entity\RercoverPasswordAwareInterface;
+use Zend\Math\Rand;
 
 /**
  * Class DiverEntity
@@ -13,6 +15,8 @@ use Strapieno\UserAvatar\Model\Entity\UserAvatarAwareTrait;
 class DiverEntity extends BaseUserEntity implements AvatarAwareInterface
 {
     use AvatarAwareTrait;
+
+    const LIST_CHARACTERS = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789-_><';
 
     /**
      * @var string
@@ -66,6 +70,27 @@ class DiverEntity extends BaseUserEntity implements AvatarAwareInterface
     public function setComment($comment)
     {
         $this->comment = $comment;
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function generateIdentityExistToken()
+    {
+        $this->identityExistToken = Rand::getString(
+            RercoverPasswordAwareInterface::RECOVER_PASSWORD_TOKEN_LENGTH,
+            DiverEntity::LIST_CHARACTERS
+        );
+        return $this;
+    }
+
+    public function generateRecoverPasswordToken()
+    {
+        $this->recoverPasswordToken = Rand::getString(
+            RercoverPasswordAwareInterface::RECOVER_PASSWORD_TOKEN_LENGTH,
+            DiverEntity::LIST_CHARACTERS
+        );
         return $this;
     }
 }

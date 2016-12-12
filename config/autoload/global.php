@@ -68,10 +68,10 @@ return [
                         'options' => [
                             'route' => '/reset-password/:token',
                         ],
-                    ],
-                ],
-            ],
-        ],
+                    ]
+                ]
+            ]
+        ]
     ],
     'mailman' => [
         'MailMan\Service\MailInterface' => [

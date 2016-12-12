@@ -1,8 +1,8 @@
 <?php
 return [
-    'user_listener' => [
-        'template' => 'email/registration',
-        'subject' => 'Wedives - Registrazione'
+    'email-setting' => [
+        'check-identity-template' => 'email/registration',
+        'check-identity-subject' => 'Wedives - Registrazione'
     ],
     'service-listeners' => [
         'factories' => [
