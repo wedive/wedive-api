@@ -80,6 +80,21 @@ return [
                     ]
                 ]
             ],
+            'password' => [
+                'validators' => [
+                    'stringlength' => [
+                        'name' => 'stringlength',
+                        'break_chain_on_failure' => true,
+                        'options' => [
+                            'min' => 8,
+                            'max' => 12
+                        ]
+                    ],
+                    'password' => [
+                        'name' => 'Strapieno\Utils\Validator\Password',
+                    ]
+                ]
+            ],
         ],
         'Application\User\Api\InputFilter\PostInputFilter' => [
             'merge' => 'Strapieno\User\Model\InputFilter\DefaultInputFilter',

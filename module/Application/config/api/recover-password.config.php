@@ -18,6 +18,7 @@ return [
             ]
         ]
     ],
+    'reset-password-inputfilter' => 'user',
     'strapieno_input_filter_specs' => [
         'Strapieno\UserRecoverPassword\Api\V1\InputFilter\GenerateTokenInputFilter' => [
             'identity' => [
