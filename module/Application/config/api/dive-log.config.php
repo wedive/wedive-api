@@ -1,5 +1,46 @@
 <?php
+
 return [
+    'service_manager' => [
+        'invokables' => [
+            'Application\DiveLog\Criteria\Mongo\DiveLogMongoCollectionCriteria' => 'Application\DiveLog\Criteria\Mongo\DiveLogMongoCollectionCriteria',
+        ],
+        'aliases' => [
+            'Strapieno\DiveLog\Model\Criteria\DiveLogCollectionCriteria' => 'Application\DiveLog\Criteria\Mongo\DiveLogMongoCollectionCriteria',
+        ]
+    ],
+    'service-listeners' => [
+        'invokables' => [
+            'Application\DiveLog\DiverBeforAuth' => 'Application\DiveLog\DiverBeforAuth',
+        ]
+    ],
+    'zf-rest' => [
+        'Strapieno\DiveLog\Api\V1\Rest\Controller' => [
+            'collection_query_whitelist' => [
+                'user_id'
+            ]
+        ]
+    ],
+    'attach-prevalidation-listeners' => [
+        'Strapieno\DiveLog\Api\V1\Rest\Controller' => [
+            'Application\DiveLog\DiverBeforAuth'
+        ]
+    ],
+    'hydrators' => [
+        'invokables' => [
+            'Application\DiveLog\Hydrator\Mongo\DiveLogModelMongoHydrator' => 'Application\DiveLog\Hydrator\Mongo\DiveLogModelMongoHydrator',
+            'Application\DiveLog\Hydrator\DiveLogHydrator' => 'Application\DiveLog\Hydrator\DiveLogHydrator'
+        ],
+         'aliases' => [
+            'Strapieno\DiveLog\Model\Hydrator\DiveLogModelMongoHydrator'  => 'Application\DiveLog\Hydrator\Mongo\DiveLogModelMongoHydrator',
+            'DiveLogApiHydrator' => 'Application\DiveLog\Hydrator\DiveLogHydrator'
+        ]
+    ],
+    'matryoshka-objects' => [
+        'DiveLog' => [
+            'type' => 'Application\DiveLog\Entity\DiveLogEntity'
+        ]
+    ],
     'strapieno_input_filter_specs' => [
         'Strapieno\DiveLog\Api\InputFilter\PostInputFilter' => [
             'visibility' => [
@@ -30,9 +71,32 @@ return [
                 'require' => true,
                 'allow_empty' => false,
             ],
+            'user_id' => [
+                'require' => true,
+                'allow_empty' => false,
+            ]
         ],
 
         'Strapieno\DiveLog\Model\InputFilter\DefaultInputFilter' => [
+            'user_id' => [
+                'require' => false,
+                'allow_empty' => true,
+                'name' => 'user_id',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validators' => [
+                    'mongoid' => [
+                        'name' => \Strapieno\Utils\Validator\Model\MongoId::class,
+                        'break_chain_on_failure' => true,
+                    ],
+                    'divelogentityexist' => [
+                        'name' => 'user-entityexist'
+                    ]
+                ]
+            ],
             'date_when' => [
                 'filters' => [
                     'tonull' =>  [
@@ -80,7 +144,7 @@ return [
                         ]
                     ]
                 ]
-            ],
+            ]
         ]
     ]
 ];

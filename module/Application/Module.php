@@ -1,7 +1,10 @@
 <?php
 namespace Application;
 
+use Application\DiveLog\AttachUserIdBeforeValidation;
+use Application\DiveLog\DiverBeforAuth;
 use Strapieno\Auth\Api\Authorization\AuthorizationListenerAggregate;
+use Strapieno\Utils\Listener\BeforeValidateListener;
 use Strapieno\Utils\Listener\CorsListener;
 use Zend\EventManager\EventManagerInterface;
 use Zend\InputFilter\InputFilterPluginManager;
@@ -9,6 +12,7 @@ use Zend\ModuleManager\Feature\ConsoleUsageProviderInterface;
 use Zend\Mvc\MvcEvent;
 use Zend\Stdlib\ArrayUtils;
 use Zend\Console\Adapter\AdapterInterface;
+use ZF\ContentValidation\ContentValidationListener;
 
 class Module implements ConsoleUsageProviderInterface
 {
@@ -33,8 +37,8 @@ class Module implements ConsoleUsageProviderInterface
     public function onBootstrap(MvcEvent $e)
     {
         $events = $e->getApplication()->getEventManager();
-        // TODO add to config
         $events->attach(new CorsListener());
+        $events->attach(new AttachUserIdBeforeValidation());
     }
 
     public function getAutoloaderConfig()

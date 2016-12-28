@@ -27,14 +27,25 @@ return [
                     'parents' => [
                         'guest'
                     ],
-                    'Strapieno\User\Api\V1\Rest\Controller::collection' => [
-                        [
-                            'allow' => false,
-                            'privileges' => [
-                                'POST'
+                    'resources' => [
+                        'Strapieno\User\Api\V1\Rest\Controller::collection' => [
+                            [
+                                'allow' => false,
+                                'privileges' => [
+                                    'POST'
+                                ]
+                            ]
+                        ],
+                        'Strapieno\DiveLog\Api\V1\Rest\Controller::collection' => [
+                            [
+                                'allow' => true,
+                                'privileges' => [
+                                    'POST'
+                                ]
                             ]
                         ]
-                    ],
+                    ]
+
                 ],
                 'guest' => [
                     'resources' => [
