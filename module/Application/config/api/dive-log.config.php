@@ -42,6 +42,13 @@ return [
         ]
     ],
     'strapieno_input_filter_specs' => [
+        'Strapieno\DiveLog\Api\InputFilter\PutInputFilter' => [
+            'merge' => 'Strapieno\DiveLog\Api\InputFilter\PostInputFilter',
+            'user_id' => [
+                'require' => false,
+                'allow_empty' => true
+            ],
+        ],
         'Strapieno\DiveLog\Api\InputFilter\PostInputFilter' => [
             'visibility' => [
                 'require' => true,
@@ -80,7 +87,6 @@ return [
                 'allow_empty' => false
             ],
         ],
-
         'Strapieno\DiveLog\Model\InputFilter\DefaultInputFilter' => [
             'user_id' => [
                 'require' => false,
