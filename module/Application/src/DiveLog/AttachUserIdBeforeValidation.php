@@ -40,7 +40,6 @@ class AttachUserIdBeforeValidation implements ListenerAggregateInterface
         $identity = $authService->getIdentity();
 
         if ($e->getRequest()->getMethod() == 'GET') {
-
             if ($identity instanceof IdentityInterface && $identity->getRoleId() == 'diver') {
                 /** @var $dataContainer ParameterDataContainer */
                 $controllerName = $serviceLocator->get('ControllerLoader')->get('Strapieno\DiveLog\Api\V1\Rest\Controller');

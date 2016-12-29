@@ -9,4 +9,13 @@ use Strapieno\DiveLog\Model\Criteria\Mongo\DiveLogMongoCollectionCriteria as Bas
  */
 class DiveLogMongoCollectionCriteria extends BaseDiveLogMongoCollectionCriteria
 {
+    /***
+     * @param $userName
+     * @return $this
+     */
+    public function setUserId($userId)
+    {
+        $this->selectionCriteria['user_reference'] = (string) $userId;
+        return $this;
+    }
 }

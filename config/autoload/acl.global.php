@@ -40,10 +40,11 @@ return [
                             [
                                 'allow' => true,
                                 'privileges' => [
-                                    'POST'
+                                    'POST',
+                                    'GET'
                                 ]
                             ]
-                        ]
+                        ],
                     ]
 
                 ],
