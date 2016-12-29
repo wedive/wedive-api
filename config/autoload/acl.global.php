@@ -45,6 +45,15 @@ return [
                                 ]
                             ]
                         ],
+                        'Strapieno\DiveLog\Api\V1\Rest\Controller::entity' => [
+                            [
+                                'allow' => true,
+                                'privileges' => [
+                                    'PUT',
+                                    'GET'
+                                ]
+                            ]
+                        ],
                     ]
 
                 ],

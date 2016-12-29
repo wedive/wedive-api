@@ -10,5 +10,29 @@ use Strapieno\User\Model\Entity\Reference\UserReferenceAwareTrait;
  */
 class DiveLogEntity extends BaseDiveLog implements UserReferenceAwareInterface
 {
+
     use UserReferenceAwareTrait;
+
+    /**
+     * @var string
+     */
+    protected $placeReference;
+
+    /**
+     * @return string
+     */
+    public function getPlaceReference()
+    {
+        return $this->placeReference;
+    }
+
+    /**
+     * @param string $placeReference
+     * @return $this
+     */
+    public function setPlaceReference($placeReference)
+    {
+        $this->placeReference = $placeReference;
+        return $this;
+    }
 }

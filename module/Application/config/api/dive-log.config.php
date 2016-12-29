@@ -74,7 +74,11 @@ return [
             'user_id' => [
                 'require' => true,
                 'allow_empty' => false,
-            ]
+            ],
+            'place_reference' => [
+                'require' => true,
+                'allow_empty' => false
+            ],
         ],
 
         'Strapieno\DiveLog\Model\InputFilter\DefaultInputFilter' => [
@@ -144,7 +148,17 @@ return [
                         ]
                     ]
                 ]
-            ]
+            ],
+            'place_reference' => [
+                'require' => true,
+                'allow_empty' => false,
+                'name' => 'place_reference',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+            ],
         ]
     ]
 ];

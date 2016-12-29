@@ -7,6 +7,7 @@ use Strapieno\Auth\Api\Authorization\AuthorizationListenerAggregate;
 use Strapieno\Utils\Listener\BeforeValidateListener;
 use Strapieno\Utils\Listener\CorsListener;
 use Zend\EventManager\EventManagerInterface;
+use Zend\I18n\Translator\Translator;
 use Zend\InputFilter\InputFilterPluginManager;
 use Zend\ModuleManager\Feature\ConsoleUsageProviderInterface;
 use Zend\Mvc\MvcEvent;
