@@ -68,12 +68,12 @@ return [
                                 ]
                             ]
                         ],
-                        // TODO remove add only to view the <img> tag on client
-                        'Strapieno\UserAvatar\Api\V1\Rest\Controller::entity' => [
+                        // Recover password
+                        'Strapieno\UserCheckIdentity\Api\V1\RpcController::validateIdentity' => [
                             [
                                 'allow' => true,
                                 'privileges' => [
-                                    'GET'
+                                    'POST'
                                 ]
                             ]
                         ],
