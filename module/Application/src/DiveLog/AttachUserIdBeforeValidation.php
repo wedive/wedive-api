@@ -39,7 +39,8 @@ class AttachUserIdBeforeValidation implements ListenerAggregateInterface
         $dataContainer = $e->getParam('ZFContentNegotiationParameterData', false);
         $identity = $authService->getIdentity();
 
-        if ($e->getRequest()->getMethod() == 'GET') {
+        $method = $e->getRequest()->getMethod();
+        if ($method == 'GET') {
             if ($identity instanceof IdentityInterface && $identity->getRoleId() == 'diver') {
                 /** @var $dataContainer ParameterDataContainer */
                 $controllerName = $serviceLocator->get('ControllerLoader')->get('Strapieno\DiveLog\Api\V1\Rest\Controller');
@@ -47,7 +48,7 @@ class AttachUserIdBeforeValidation implements ListenerAggregateInterface
             }
         }
 
-        if ($e->getRequest()->getMethod() == 'POST') {
+        if ($method == 'POST' || $method == 'PUT' || $method == 'PATCH') {
 
             if ($identity instanceof IdentityInterface && $identity->getRoleId() == 'diver') {
                 /** @var $dataContainer ParameterDataContainer */
