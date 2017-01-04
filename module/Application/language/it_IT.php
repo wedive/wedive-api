@@ -87,11 +87,11 @@ return array(
     "Invalid type given. String, integer or float expected" => "Tipo di dato non valido. Era atteso un dato di tipo string, float o integer",
 
     // Zend\Validator\EmailAddress
-    "Invalid type given. String expected" => "Tipo di dato non valido. Era attesto un dato di tipo string",
-    "The input is not a valid email address. Use the basic format local-part@hostname" => "L'input non è un indirizzo email valido nel formato base local-part@hostname",
-    "'%hostname%' is not a valid hostname for the email address" => "'%hostname%' non è un hostname valido nell'indirizzo email",
-    "'%hostname%' does not appear to have any valid MX or A records for the email address" => "'%hostname%' non sembra avere un record MX o A valido nell'indirizzo email",
-    "'%hostname%' is not in a routable network segment. The email address should not be resolved from public network" => "'%hostname%' non è in un segmento di rete instradabile. L'indirizzo email non può essere risolto nella rete pubblica",
+    "Invalid type given. String expected" => "Dato non valido. Era attesto un dato di tipo string",
+    "The input is not a valid email address. Use the basic format local-part@hostname" => "Il dato non è un indirizzo valido name@hostname",
+    "'%hostname%' is not a valid hostname for the email address" => "'%hostname%' non è un hostname valido",
+    "'%hostname%' does not appear to have any valid MX or A records for the email address" => "'%hostname%' non ha un record MX o A valido",
+    "'%hostname%' is not in a routable network segment. The email address should not be resolved from public network" => "'%hostname%' non è in un segmento di rete instradabile.",
     "'%localPart%' can not be matched against dot-atom format" => "'%localPart%' non può essere validato nel formato dot-atom",
     "'%localPart%' can not be matched against quoted-string format" => "'%localPart%' non può essere validato nel formato quoted-string",
     "'%localPart%' is not a valid local part for the email address" => "'%localPart%' non è una local part valida nell'indirizzo email",
