@@ -296,4 +296,16 @@ return array(
     "Empty captcha value" => "Valore del captcha vuoto",
     "Captcha ID field is missing" => "Manca il campo Captcha ID",
     "Captcha value is wrong" => "Il valore del Captcha è sbagliato",
+
+    'Identifier format not valid' => 'Identificativo non valido',
+
+    'Value must be an array' => 'Il dato deve essere un array',
+
+    'Latitude format not valid' => 'Formato della latitudine sbagliato',
+
+    'Longitude format not valid' => 'Formato della longitudine sbagliato',
+
+   "The input must contain at least one uppercase character" => 'Il dato deve contenere una lettera maiuscola',
+   "The input must contain at least one digit" => 'Il dato deve contenere un numero',
+   "The input must contain at least one special character %specialCharacter%" => 'Il dato deve contenere un carattere %specialCharacter%',
 );
