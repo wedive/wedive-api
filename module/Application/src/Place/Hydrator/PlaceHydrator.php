@@ -6,8 +6,10 @@ use Matryoshka\Model\Hydrator\Strategy\HasManyStrategy;
 use Matryoshka\Model\Hydrator\Strategy\HasOneStrategy;
 use Strapieno\Place\Api\V1\Hydrator\PlaceHydrator as BasePlaceHydrator;
 use Strapieno\PlaceGallery\Model\Entity\Reference\GalleryReference;
+use Strapieno\User\Model\Entity\State\UserStateStrategy;
 use Strapieno\Utils\Hydrator\Strategy\NamingStrategy\MapUnderscoreNamingStrategy;
 use Strapieno\Utils\Hydrator\Strategy\ReferenceEntityCompressStrategy;
+use Strapieno\Utils\Hydrator\Strategy\StateStrategy;
 use Strapieno\Utils\Model\Object\Collection;
 use Strapieno\Utils\Model\Object\MediaReference\MediaReference;
 use Zend\Hydrator\Filter\FilterComposite;
@@ -47,5 +49,9 @@ class PlaceHydrator extends BasePlaceHydrator
                 false
             )
         );
+
+        $strategy = new StateStrategy();
+        $strategy->setFirstStateName('validating');
+        $this->addStrategy('state', $strategy);
     }
 }

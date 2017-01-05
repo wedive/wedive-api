@@ -7,6 +7,7 @@ use Matryoshka\Model\Hydrator\Strategy\HasOneStrategy;
 use Strapieno\Place\Model\Entity\Object\GeoCoordinateObject;
 use Strapieno\Place\Model\Hydrator\Mongo\PlaceModelMongoHydrator as BasePlaceModelMongoHydrator;
 use Strapieno\PlaceGallery\Model\Entity\Reference\GalleryReference;
+use Strapieno\Utils\Hydrator\Strategy\StateStrategy;
 use Strapieno\Utils\Model\Object\Collection;
 use Strapieno\Utils\Model\Object\MediaReference\MediaReference;
 use Zend\Hydrator\Filter\FilterComposite;
@@ -49,5 +50,8 @@ class PlaceModelMongoHydrator extends BasePlaceModelMongoHydrator
                 false
             )
         );
+        $strategy = new StateStrategy();
+        $strategy->setFirstStateName('validating');
+        $this->addStrategy('state', $strategy);
     }
 }
