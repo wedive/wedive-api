@@ -1,5 +1,5 @@
 <?php
-namespace Application\DiveLog;
+namespace Application\Place;
 
 use Strapieno\Auth\Api\Identity\IdentityInterface;
 use Zend\Authentication\AuthenticationService;
@@ -11,7 +11,7 @@ use ZF\ContentNegotiation\ParameterDataContainer;
 use ZF\ContentValidation\ContentValidationListener;
 
 /**
- * Class AttachUserIdBeforeValidation
+ * Class DiverBeforAuth
  */
 class AttachUserIdBeforeValidation implements ListenerAggregateInterface
 {
@@ -24,11 +24,12 @@ class AttachUserIdBeforeValidation implements ListenerAggregateInterface
 
     public function attachUserId(MvcEvent $e)
     {
+
         $serviceLocator = $e->getApplication()->getServiceManager();
         $config = $serviceLocator->get('Config');
         $controllerName = $e->getRouteMatch()->getParam('controller');
 
-        if ($controllerName != 'Strapieno\DiveLog\Api\V1\Rest\Controller') {
+        if ($controllerName != 'Strapieno\Place\Api\V1\Rest\Controller') {
             return;
         }
 

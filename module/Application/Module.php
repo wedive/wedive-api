@@ -1,7 +1,8 @@
 <?php
 namespace Application;
 
-use Application\DiveLog\AttachUserIdBeforeValidation;
+use Application\DiveLog\AttachUserIdBeforeValidation as DiveLogAttachUserIdBeforeValidation;
+use Application\Place\AttachUserIdBeforeValidation as PlaceAttachUserIdBeforeValidation;
 use Application\DiveLog\DiverBeforAuth;
 use Strapieno\Auth\Api\Authorization\AuthorizationListenerAggregate;
 use Strapieno\Utils\Listener\BeforeValidateListener;
@@ -39,7 +40,8 @@ class Module implements ConsoleUsageProviderInterface
     {
         $events = $e->getApplication()->getEventManager();
         $events->attach(new CorsListener());
-        $events->attach(new AttachUserIdBeforeValidation());
+        $events->attach(new DiveLogAttachUserIdBeforeValidation());
+        $events->attach(new PlaceAttachUserIdBeforeValidation());
     }
 
     public function getAutoloaderConfig()

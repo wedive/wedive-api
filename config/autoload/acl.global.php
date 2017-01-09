@@ -54,6 +54,23 @@ return [
                                 ]
                             ]
                         ],
+                        'Strapieno\Place\Api\V1\Rest\Controller::entity' => [
+                            [
+                                'assert' => 'Application\Place\Assertion\StateAssertion',
+                                'allow' => true,
+                                'privileges' => [
+                                    'PUT'
+                                ]
+                            ]
+                        ],
+                        'Strapieno\Place\Api\V1\Rest\Controller::collection' => [
+                            [
+                                'allow' => true,
+                                'privileges' => [
+                                    'POST'
+                                ]
+                            ]
+                        ]
                     ]
 
                 ],

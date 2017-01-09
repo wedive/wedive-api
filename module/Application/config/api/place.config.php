@@ -1,5 +1,22 @@
 <?php
 return [
+    'service_manager' => [
+        'invokables' => [
+            'Application\Place\Criteria\Mongo\PlaceMongoCollectionCriteria' => 'Application\Place\Criteria\Mongo\PlaceMongoCollectionCriteria',
+        ],
+        'aliases' => [
+            'Strapieno\Place\Model\Criteria\PlaceCollectionCriteria' => 'Application\Place\Criteria\Mongo\PlaceMongoCollectionCriteria',
+        ]
+    ],
+    'aclman-assertion-manager' => [
+        'invokables' => [
+            'Application\Place\Assertion\IsOwnAssertion' => 'Application\Place\Assertion\IsOwnAssertion',
+            'Application\Place\Assertion\StateAssertion' => 'Application\Place\Assertion\StateAssertion',
+        ],
+        'initializers' => [
+            'placeService' => 'Strapieno\Place\Model\PlaceModelInitializer'
+        ]
+    ],
     'hydrators' => [
         'invokables' => [
             'Application\Place\Hydrator\Mongo\PlaceModelMongoHydrator' => 'Application\Place\Hydrator\Mongo\PlaceModelMongoHydrator',
@@ -13,6 +30,13 @@ return [
     'matryoshka-objects' => [
         'Place' => [
             'type' => 'Application\Place\Entity\PlaceEntity'
+        ]
+    ],
+    'zf-rest' => [
+        'Strapieno\Place\Api\V1\Rest\Controller' => [
+            'collection_query_whitelist' => [
+                'user_id'
+            ]
         ]
     ],
     'zf-content-validation' => [
