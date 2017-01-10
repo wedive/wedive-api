@@ -139,7 +139,7 @@ return [
                         'name' => 'between',
                         'options' => [
                             'min' => 0,
-                            'max' => 10
+                            'max' => 5
                         ]
                     ],
                 ],
