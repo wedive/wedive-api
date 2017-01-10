@@ -103,6 +103,15 @@ return [
                                 ]
                             ]
                         ],
+                        // Identity
+                        'Strapieno\Identity\Api\V1\RpcController::getIdentity' => [
+                            [
+                                'allow' => true,
+                                'privileges' => [
+                                    'GET'
+                                ]
+                            ]
+                        ],
                         // Reset password
                         'Strapieno\UserRecoverPassword\Api\V1\ResetRpcController::resetPassword' => [
                             [
