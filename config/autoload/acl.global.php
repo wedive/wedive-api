@@ -70,6 +70,30 @@ return [
                                     'POST'
                                 ]
                             ]
+                        ],
+                        'Strapieno\PlaceGallery\Api\V1\Rest\Controller::collection' => [
+                            [
+                                'allow' => true,
+                                'privileges' => [
+                                    'POST'
+                                ]
+                            ]
+                        ],
+                        'Strapieno\PlaceGallery\Api\V1\Rest\Controller::entity' => [
+                            [
+                                'allow' => true,
+                                'privileges' => [
+                                    'PUT'
+                                ]
+                            ]
+                        ],
+                        'Strapieno\PlaceCover\Api\V1\Rest\Controller::entity' => [
+                            [
+                                'allow' => true,
+                                'privileges' => [
+                                    'PUT'
+                                ]
+                            ]
                         ]
                     ]
 
