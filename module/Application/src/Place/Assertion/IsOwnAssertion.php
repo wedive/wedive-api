@@ -23,6 +23,9 @@ class IsOwnAssertion implements AssertionInterface, PlaceModelAwareInterface, Se
 {
     use PlaceModelAwareTrait;
     use ServiceLocatorAwareTrait;
+    use PlaceUtilsTrait {
+        PlaceUtilsTrait::getServiceLocator insteadof ServiceLocatorAwareTrait;
+    }
 
     protected $place;
 
@@ -31,14 +34,7 @@ class IsOwnAssertion implements AssertionInterface, PlaceModelAwareInterface, Se
         if ($role instanceof IdentityInterface) {
             $object = $role->getAuthenticationObject();
 
-            $mvcEvent   = $this->getServiceLocator()->get('Application')->getMvcEvent();
-            /** @var $routeMatch RouteMatch */
-            $routeMatch = $mvcEvent->getRouteMatch();
-            $placeId = $routeMatch->getParam('place_id');
-
-            $criteria = new ActiveRecordCriteria();
-            $criteria->setId($placeId);
-            $this->place = $this->getPlaceModelService()->find($criteria)->current();
+            $this->place = $this->getPlace();
 
             if ($object instanceof UserInterface
                 && $this->place instanceof UserReferenceAwareInterface
@@ -51,13 +47,5 @@ class IsOwnAssertion implements AssertionInterface, PlaceModelAwareInterface, Se
             }
         }
         return false;
-    }
-
-    public function getServiceLocator()
-    {
-        if ($this->serviceLocator instanceof AbstractPluginManager) {
-            $this->serviceLocator = $this->serviceLocator->getServiceLocator();
-        }
-        return $this->serviceLocator;
     }
 }

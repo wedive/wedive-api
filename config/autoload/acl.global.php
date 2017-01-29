@@ -56,7 +56,15 @@ return [
                         ],
                         'Strapieno\Place\Api\V1\Rest\Controller::entity' => [
                             [
-                                'assert' => 'Application\Place\Assertion\StateAssertion',
+                                'assert' => [
+                                    [
+                                        'name' => 'Application\Place\Assertion\IsOwnAssertion',
+                                    ],
+                                    [
+                                        'name' => 'Application\Place\Assertion\StateAssertion',
+                                        'state' => 'validating',
+                                    ],
+                                ],
                                 'allow' => true,
                                 'privileges' => [
                                     'PUT'
@@ -74,6 +82,15 @@ return [
                         'Strapieno\PlaceGallery\Api\V1\Rest\Controller::collection' => [
                             [
                                 'allow' => true,
+                                'assert' => [
+                                    [
+                                        'name' => 'Application\Place\Assertion\IsOwnAssertion',
+                                    ],
+                                    [
+                                        'name' => 'Application\Place\Assertion\StateAssertion',
+                                        'state' => 'validating',
+                                    ],
+                                ],
                                 'privileges' => [
                                     'POST'
                                 ]
@@ -82,14 +99,33 @@ return [
                         'Strapieno\PlaceGallery\Api\V1\Rest\Controller::entity' => [
                             [
                                 'allow' => true,
+                                'assert' => [
+                                    [
+                                        'name' => 'Application\Place\Assertion\IsOwnAssertion',
+                                    ],
+                                    [
+                                        'name' => 'Application\Place\Assertion\StateAssertion',
+                                        'state' => 'validating',
+                                    ],
+                                ],
                                 'privileges' => [
-                                    'PUT'
+                                    'PUT',
+                                    'DELETE'
                                 ]
                             ]
                         ],
                         'Strapieno\PlaceCover\Api\V1\Rest\Controller::entity' => [
                             [
                                 'allow' => true,
+                                'assert' => [
+                                    [
+                                        'name' => 'Application\Place\Assertion\IsOwnAssertion',
+                                    ],
+                                    [
+                                        'name' => 'Application\Place\Assertion\StateAssertion',
+                                        'state' => 'validating',
+                                    ],
+                                ],
                                 'privileges' => [
                                     'PUT'
                                 ]

@@ -21,22 +21,61 @@ use Zend\ServiceManager\ServiceLocatorAwareTrait;
 /**
  * Class StateAssertion
  */
-class StateAssertion extends IsOwnAssertion
+class StateAssertion  implements AssertionInterface, PlaceModelAwareInterface, ServiceLocatorAwareInterface
 {
-    protected $state = 'validating';
+    use PlaceModelAwareTrait;
+    use ServiceLocatorAwareTrait;
+    use PlaceUtilsTrait {
+        PlaceUtilsTrait::getServiceLocator insteadof ServiceLocatorAwareTrait;
+    }
+    /**
+     * @var string
+     */
+    protected $state;
+
+    /**
+     * StateAssertion constructor.
+     * @param string $state
+     */
+    public function __construct($option = null)
+    {
+        if (is_array($option) && isset($option['state'])) {
+            $this->setState($option['state']);
+        } else {
+        //    throw new \InvalidArgumentException('Missing argument state');
+        }
+    }
+
 
     public function assert(Acl $acl, RoleInterface $role = null, ResourceInterface $resource = null, $privilege = null)
     {
-        $result =  parent::assert($acl, $role, $resource, $privilege);
+        $place = $this->getPlace();
+        if ($place instanceof StateAwareInterface) {
 
-        if ($result && $this->place instanceof StateAwareInterface) {
-            $state = $this->place->getState();
-            if ($state->getName() == $this->state) {
+            if ($place->getState()->getName() == $this->state) {
                 $result = true;
             } else {
                 $result = false;
             }
         }
         return $result;
+    }
+
+    /**
+     * @return string
+     */
+    public function getState()
+    {
+        return $this->state;
+    }
+
+    /**
+     * @param string $state
+     * @return $this
+     */
+    public function setState($state)
+    {
+        $this->state = $state;
+        return $this;
     }
 }
