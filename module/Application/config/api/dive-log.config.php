@@ -9,6 +9,14 @@ return [
             'Strapieno\DiveLog\Model\Criteria\DiveLogCollectionCriteria' => 'Application\DiveLog\Criteria\Mongo\DiveLogMongoCollectionCriteria',
         ]
     ],
+    'aclman-assertion-manager' => [
+        'invokables' => [
+            'Application\DiveLog\Assertion\IsOwnAssertion' => 'Application\DiveLog\Assertion\IsOwnAssertion',
+        ],
+        'initializers' => [
+            'Strapieno\DiveLog\Model\DiveLogModelInitializer'
+        ]
+    ],
     'service-listeners' => [
         'invokables' => [
             'Application\DiveLog\DiverBeforAuth' => 'Application\DiveLog\DiverBeforAuth',

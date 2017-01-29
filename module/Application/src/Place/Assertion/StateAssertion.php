@@ -1,6 +1,7 @@
 <?php
 namespace Application\Place\Assertion;
 
+use Application\ApplicationServiceLocatorAwareTrait;
 use Matryoshka\Model\Wrapper\Mongo\Criteria\ActiveRecord\ActiveRecordCriteria;
 use Strapieno\Auth\Api\Identity\IdentityInterface;
 use Strapieno\Place\Model\PlaceModelAwareInterface;
@@ -25,8 +26,9 @@ class StateAssertion  implements AssertionInterface, PlaceModelAwareInterface, S
 {
     use PlaceModelAwareTrait;
     use ServiceLocatorAwareTrait;
-    use PlaceUtilsTrait {
-        PlaceUtilsTrait::getServiceLocator insteadof ServiceLocatorAwareTrait;
+    use PlaceUtilsTrait;
+    use ApplicationServiceLocatorAwareTrait {
+        ApplicationServiceLocatorAwareTrait::getServiceLocator insteadof ServiceLocatorAwareTrait;
     }
     /**
      * @var string

@@ -1,23 +1,22 @@
 <?php
-namespace Application\Place\Assertion;
+namespace Application\DiveLog\Assertion;
 
 use Matryoshka\Model\Wrapper\Mongo\Criteria\ActiveRecord\ActiveRecordCriteria;
-use Zend\ServiceManager\AbstractPluginManager;
 
 /**
- * Class PlaceUtilsTrait
+ * Class DiveLogUtilsTrait
  */
-trait PlaceUtilsTrait
+trait DiveLogUtilsTrait
 {
-    public function getPlace()
+    public function getDiveLog()
     {
         $mvcEvent   = $this->getServiceLocator()->get('Application')->getMvcEvent();
         /** @var $routeMatch RouteMatch */
         $routeMatch = $mvcEvent->getRouteMatch();
-        $placeId = $routeMatch->getParam('place_id');
+        $placeId = $routeMatch->getParam('dive-log_id');
 
         $criteria = new ActiveRecordCriteria();
         $criteria->setId($placeId);
-        return $this->getPlaceModelService()->find($criteria)->current();
+        return $this->getDiveLogModelService()->find($criteria)->current();
     }
 }

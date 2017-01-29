@@ -48,6 +48,11 @@ return [
                         'Strapieno\DiveLog\Api\V1\Rest\Controller::entity' => [
                             [
                                 'allow' => true,
+                                'assert' => [
+                                    [
+                                        'name' => 'Application\DiveLog\Assertion\IsOwnAssertion',
+                                    ],
+                                ],
                                 'privileges' => [
                                     'PUT',
                                     'GET'
