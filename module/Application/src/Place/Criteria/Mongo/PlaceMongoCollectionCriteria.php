@@ -18,4 +18,10 @@ class PlaceMongoCollectionCriteria extends BaseDiveLogMongoCollectionCriteria
         $this->selectionCriteria['user_reference'] = (string) $userId;
         return $this;
     }
+
+    public function setState($state)
+    {
+        $this->selectionCriteria['state'] = $state;
+        return $this;
+    }
 }

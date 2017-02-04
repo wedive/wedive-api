@@ -35,7 +35,8 @@ return [
     'zf-rest' => [
         'Strapieno\Place\Api\V1\Rest\Controller' => [
             'collection_query_whitelist' => [
-                'user_id'
+                'user_id',
+                'state'
             ]
         ]
     ],
