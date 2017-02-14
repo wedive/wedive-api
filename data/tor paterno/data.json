@@ -1,0 +1,18 @@
+{
+  "name": "Secche di tor paterno",
+  "description": "A pochi minuti da Roma, a largo del Lido di Castel Fusano, esiste un’area sottomarina che avreste potuto immaginare solo in località ben più blasonate. Paradiso per sub e amanti della pesca sportiva, le Secche di Tor Paterno, sono costituite da una formazione rocciosa ed appaiono come una vera isola sul fondo del mare, in un ampio \"deserto\" di sabbia delimitato in superficie da 4 boe. La profondità massima è di circa 60 metri, mentre la sommità della” montagna” giunge a 18 metri sotto il livello del mare e nulla emerge dall’acqua. Questa “città” sottomarina è popolata da molte specie animali e vegetali: si può trovare la Posidonia oceanica e colonie di Celenterati come la bellissima Gorgonia rossa e gli Alcionari, rarissimi altrove.",
+  "geo_coordinate": {
+    "latitude": "41.60312",
+    "longitude": "12.23602",
+    "elevation": null
+  },
+
+  "max_depth": "23",
+  "min_depth": null,
+  "visibility": "3",
+  "current": "3",
+  "badges": [
+    "wreck",
+    "wall"
+  ]
+}

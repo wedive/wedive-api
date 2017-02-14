@@ -47,10 +47,14 @@ return [
         ]
     ],
     'BadgesPlace' => [
+        'recreation',
+        'experts',
         'cave',
         'wall',
         'fish',
-        'wreck'
+        'wreck',
+        'archeological',
+        'psa' // protected sea area
     ],
     'strapieno-array-validators' => [
         'BadgesPlaceValidator' => [
@@ -90,6 +94,10 @@ return [
                 'name' => 'description',
                 'require' => true,
                 'allow_empty' => false
+            ],
+            'start_point_dive' => [
+                'require' => true,
+                'allow_empty' => false,
             ],
         ],
 
@@ -159,6 +167,21 @@ return [
                         'name' => 'BadgesPlaceValidator'
                     ],
                 ],
+            ],
+            'start_point_dive' => [
+                'require' => false,
+                'allow_empty' => true,
+                'name' => 'start_point_dive',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validators' => [
+                    'StartPointDiveLog' => [
+                        'name' => 'StartPointDiveLogValidator'
+                    ]
+                ]
             ]
         ]
     ]

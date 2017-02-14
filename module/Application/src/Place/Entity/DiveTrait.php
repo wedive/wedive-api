@@ -32,6 +32,13 @@ trait DiveTrait
     protected $badges;
 
     /**
+     * beach or sea
+     *
+     * @var string
+     */
+    protected $startPointDive;
+
+    /**
      * @return int
      */
     public function getMaxDepth()
@@ -111,5 +118,23 @@ trait DiveTrait
     public function setBadges($badges)
     {
         $this->badges = $badges;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStartPointDive()
+    {
+        return $this->startPointDive;
+    }
+
+    /**
+     * @param string $startPointDive
+     * @return $this
+     */
+    public function setStartPointDive($startPointDive)
+    {
+        $this->startPointDive = $startPointDive;
+        return $this;
     }
 }

@@ -57,4 +57,15 @@ interface DiveInterface
      * @param array $badges
      */
     public function setBadges($badges);
+
+    /**
+     * @return string
+     */
+    public function getStartPointDive();
+
+    /**
+     * @param string $startPointDive
+     * @return $this
+     */
+    public function setStartPointDive($startPointDive);
 }
