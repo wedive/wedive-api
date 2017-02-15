@@ -1,0 +1,17 @@
+{
+  "name": "Secche del papa",
+  "description": "Al largo di Punta del Papa, appena all'esterno della Zona A, dal fondo detritico di circa 45 metri si solleva una sequenza di rilievi calcarei che proseguono sott'acqua il profilo della punta. La secca è divisa in due da un canale sabbioso (Papa 1 e Papa 2) e il colmo del primo rilievo è a 15 m, il secondo è a 24 m. Ciascuna delle due parti è servita da un gavitello di ormeggio. L'immersione è consentita solo tramite i centri d'immersione autorizzati. Gli aspetti caratterizzanti del sito sono principalmente due: l'ambiente coralligeno e la straordinaria presenza di pesce. Il coralligeno si qualifica per la diffusa presenza di paramuricee (Paramuricea clavata) nella variante di colore che vira dal rosso al giallo e per le ripide pareti colonizzate da margherite di mare. L'insieme delle secche è d'altro canto uno straordinario attrattore di pesci di grandi dimensioni che si mostrano con confidenza ai subacquei. Le grandi cernie sono molto numerose, circondate dagli esemplari più piccoli; sciami di corvine sostano negli avvallamenti tra i rilievi; dotti, saraghi maggiori e pizzuti si spostano in cerca di cibo, mentre grandi dentici si lasciano spesso avvicinare dai subacquei. Vi sono poi presenze stagionali di ricciole, palamite, lampughe e, a volte, mobule o pesci luna",
+  "geo_coordinate": {
+    "latitude": "40.92306",
+    "longitude": "9.75222",
+    "elevation": null
+  },
+
+  "max_depth": "45",
+  "min_depth": "15",
+  "visibility": "5",
+  "current": "3",
+  "badges": [
+    "fish"
+  ]
+}

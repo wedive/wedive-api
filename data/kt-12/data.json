@@ -1,0 +1,15 @@
+{
+  "name": "KT-12 Golfo di Orosei",
+  "description": "Una nave cargo della seconda guerra mondiale in perfetto assetto di navigazione ci aspetta sul fondo. Relitto diviso in due parti: la punta è posizionata parecchio più distante, ma non merita un tuffo tanto quanto la parte più grande e importante della nave. Appena fuori dal relitto, a poca distanza, su fondale sabbioso, ci attende una jeep che sembra volerci indicare l'inizio dell'esplorazione. Menzione particolare, anche per foto ricordo, il cannone che troneggia a poppa.",
+  "geo_coordinate": {
+    "latitude": 40.264289,
+    "longitude": 9.730384  },
+  "aggregate_rating": {
+    "partial": null,
+    "rating_count": null,
+    "review_count": null
+  },
+  "max_depth": 36,
+  "visibility": 3,
+  "badges": null
+}

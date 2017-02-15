@@ -1,0 +1,17 @@
+{
+  "name": "Secche di isuela",
+  "description": "Programmando una permanenza sul fondo di almeno 30/35 minuti si può circumnavigare l'intera Isuela e ammirare le meraviglie che nasconde alle quote più profonde, compresi gli scogli a sud che sono leggermente distanziati. La fama di questa immersione è giustamente meritata, qui è presente tutta la vita del mediterraneo in concentrazioni esagerate. Probabilmente la distanza dalla costa e la presenza di correnti spesso anche forti, rendono questo luogo particolare per la straordinaria fioritura e lo sviluppo di ogni tipo di specie vegetale e animale. Meno conosciuta ma altrettanto affascinante è la secca detta Isuelita, chiamata così perché unita alla sorella maggiore da una sella che rasenta il fondale in direzione di ponente. Il punto di congiunzione è intorno ai 40 metri di profondità, se la visibilità lo permette è possibile staccarsi dal versante di ponente dell'Isuela già a 30 metri, sorvolando nel blu la distanza che le separa fino a raggiungere il cappello, a circa 33 metri.",
+  "geo_coordinate": {
+    "latitude": "41.60312",
+    "longitude": "12.23602",
+    "elevation": null
+  },
+
+  "max_depth": "55",
+  "min_depth": "13",
+  "visibility": "5",
+  "current": "3",
+  "badges": [
+    "wall"
+  ]
+}

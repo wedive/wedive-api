@@ -1,0 +1,18 @@
+{
+  "name": "Sifone di Punta su Mastixi",
+  "description": "Una bella e particolare immersione. Ci si immerge su un prato di posidonia intorno ai 7 metri, per poi sporgersi, oltre il drop-off, e proseguire l'immersione in parete. Caratteristica unica, la risalita attraverso un foro naturale molto ampio nel reef per tornare al prato di posidonia di partenza. Cernie e rami di gorgonie dai colori sgargianti fanno da cornice a questo caratteristico scenario",
+  "geo_coordinate": {
+    "latitude": 39.848369,
+    "longitude": 9.698716  },
+  "aggregate_rating": {
+    "partial": null,
+    "rating_count": null,
+    "review_count": null
+  },
+  "max_depth": 18,
+  "visibility": 4,
+  "current": 0,
+  "badges": [
+    "wall"
+  ]
+}

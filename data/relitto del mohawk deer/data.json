@@ -1,0 +1,16 @@
+{
+  "name": "Relitto del Mohawk Deer",
+  "description": "È certamente il relitto più conosciuto della zona, il mercantile si trova nella Cala degli Inglesi adagiato su un fondale che varia dai -20 ai -40 metri. La storia di questa nave è lunga e bizzarra, originaria dei Grandi Laghi Americani, nacque nel 1896 come Waldo e naufragò la prima volta, spezzata in due nel 1913sul Lago Superiore durannte un terribile fortunale. Recuperata l'anno seguente continuò a navigare sino allo schianto , avvenuto nel 1967, contro il Promontorio di Portofino. La vecchia nave canadese era partita dal porto di Genova la mattina del 5 Novembre di quell'anno, al traino di un rimorchiatore jugoslavo, diretta a La Spezia presso un cantiere di demolizione; durante la traversata però una violenta libecciata fece rompere il cavo di traino così il suo viaggio finì tra le rocce della Baia degli Inglesi, destinata a diventare L'habitat ideale per pesci e... subacquei, rimanendo nella memoria suo malgrado, ancora per lunghi anni. In origine questa nave da carico era lunga 118mt. circa con un motore a vapore spinto da due caldaie, ancora esistenti, che giacciono isolate dal relitto ad una profondità di 51mt. Successivamente per volere di uno dei suoi armatori, perchè ne ebbe ben cinque, venne allungata di 20 metri e raggiunse la lunghezza di quasi 140 mt. così da aumentarne la capacità di trasporto che la fece traghettare merci per più di 60 anni, durante i quali cambiò anche nome, dopo Waldo fu denominata Riverton e poi Mohawk Deer dal nome dell'ultima società armatrice che l'acquistò nel 1948 la Mohawk Navigation Co., che ne era ancora proprietaria, al momento del naufragio. Una curiosità è che questo avvenne negli stessi giorni di Novembre e come 54 anni prima lo scafo si è spezzato in due durante l'affondamento.",
+  "geo_coordinate": {
+    "latitude": "44.30781",
+    "longitude": "9.19154",
+    "elevation": null
+  },
+  "max_depth": "50",
+  "min_depth": "20",
+  "visibility": "4",
+  "current": "0",
+  "badges": [
+    "wreck"
+  ]
+}

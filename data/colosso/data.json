@@ -1,0 +1,16 @@
+{
+  "name": "Colosso",
+  "description": "Il rimorchiatore conosciuto come Vittoria si chiamava COLOSSO della classe V (VIGOROSO) e fu costruito presso i Cantieri del Quarnaro a Fiume su ordine della Marina Militare Italiana e varato il 12 febbraio 1942. La nave misurava 32,9 metri di lunghezza per 7,9 metri di larghezza e montava una macchina a vapore alimentata a carbone. Tra gli episodi che caratterizzarono le sue missioni è da ricordare il rimorchio della mn VIMINALE il 23 gennaio del 1943 da Palermo a Taranto con passaggio per Messina, durante la quale il COLOSSO rischiò di affondare, trascinato sul fondo dalla stessa mn VIMINALE, bersaglio delle attività aeree alleate. Dopo l’8 settembre 1943 fu preda bellica tedesca a Genova ed armato con due nuove postazioni: a prora con una mitragliatrice ed a poppa probabilmente con un cannone Bofors da 40 mm, che oggi sfortunatamente non sono più presenti sul relitto. Nell’ aprile del 1945 il COLOSSO fu affondato da un attacco aereo alleato, non è ancora chiara la dinamica che portò all’affondamento. L’esplorazione del relitto non evidenzia tracce di bombardamento o siluramento per cui la causa dell’affondamento più probabile è da ricercarsi nel trascinamento sul fondo da parte delle stesse chiatte rimorchiate, vero obbiettivo dell’attacco aereo. A dimostrazione di questa ricostruzione alcuni elementi del relitto stesso, in particolare la compressione e schiacciamento verso il basso degli osteriggi della sala macchine causato dalla anomala tensione del cavo di rimorchio. Il relitto è posizionato nella meravigliosa baia compresa tra Bonassola e Framura, a circa 0,5 mn a Nord/Nord Ovest dalla Punta di Monte Grosso. L'identificazione è rimasta incerta per tutto questo tempo in quanto l' USMM (Ufficio Storico della Marina Militare) lo indicava come affondato "a Genova" nonostante il Portolano n.1 del 1947 ne segnalasse esplicitamente il relitto anche se su Punta Mesco. Di notevole interesse storico, è oggi l’ultimo esemplare di rimorchiatore della Classe V (VIGOROSO), giace su un fondale sabbioso a 40 metri di profondità, in perfetto assetto di navigazione. Le due strutture, che un tempo ospitavano le mitragliatrici antiaeree: una sopra il cassero di comando l'altra sulla robusta prua, si notano immediatamente. Attraverso un boccaporto si può raggiungere la stiva di prua, dalla quale una scaletta porta all'interno del primo ponte. La cucina è perfettamente conservata e negli alloggi dell'equipaggio ci sono ancora le cuccette e alcuni scaffali, a poppavia del fumaiolo si accede alla sala macchine, dove tra valvole e manometri scorgiamo le antenne di qualche timida aragosta. In coperta si trovano i numerosi bocchettoni che servivano da attacco per gli idranti e la caratteristica poppa invita all'esplorazione della grande elica e del timone, sproporzionati rispetto alle dimensioni della nave.",
+  "geo_coordinate": {
+    "latitude": "44.19056",
+    "longitude": "9.56556",
+    "elevation": null
+  },
+  "max_depth": "39",
+  "min_depth": "33",
+  "visibility": "3",
+  "current": "0",
+  "badges": [
+    "wreck"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "La Grotta dei Pipistrelli",
+  "description": "Un'immersione in parete, a poca profondità, che ci nasconde un comodo e ampio ingresso, con accesso diretto alla superficie, ad una grotticina. Caratteristica la riemersione al suo interno in quanto popolata da molte decine di pipistrelli. Sul fondo, all'interno della grotta, è facile trovare dei gamberi, con i loro caratteristici occhioni.",
+  "geo_coordinate": {
+    "latitude": 39.719304,
+    "longitude": 9.676093  },
+  "aggregate_rating": {
+    "partial": null,
+    "rating_count": null,
+    "review_count": null
+  },
+  "max_depth": 12,
+  "visibility": "high",
+  "badges": null
+}

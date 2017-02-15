@@ -47,8 +47,6 @@ return [
         ]
     ],
     'BadgesPlace' => [
-        'recreation',
-        'experts',
         'cave',
         'wall',
         'fish',
@@ -56,9 +54,18 @@ return [
         'archeological',
         'psa' // protected sea area
     ],
+    'TypeDive' => [
+        'open',
+        'advance',
+        'deep',
+        'expert'
+    ],
     'strapieno-array-validators' => [
         'BadgesPlaceValidator' => [
             'name_key_array_config' => 'BadgesPlace'
+        ],
+        'TypeDiveValidator' => [
+            'name_key_array_config' => 'TypeDive'
         ]
     ],
     // TODO revrite default input filter
@@ -181,6 +188,16 @@ return [
                     'StartPointDiveLog' => [
                         'name' => 'StartPointDiveLogValidator'
                     ]
+                ]
+            ],
+            'dive_type' => [
+                'name' => 'dive_type',
+                'require' => false,
+                'type' => \Strapieno\Utils\InputFilter\ArrayInput::class,
+                'validators' => [
+                    0 => [
+                        'name' => 'TypeDiveValidator'
+                    ],
                 ]
             ]
         ]

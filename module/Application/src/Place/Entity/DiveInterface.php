@@ -68,4 +68,15 @@ interface DiveInterface
      * @return $this
      */
     public function setStartPointDive($startPointDive);
+
+    /**
+     * @return array
+     */
+    public function getDiveType();
+
+    /**
+     * @param array $diveType
+     * @return $this
+     */
+    public function setDiveType($diveType);
 }

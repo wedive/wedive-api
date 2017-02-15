@@ -1,0 +1,16 @@
+{
+  "name": "Washi di portofino",
+  "description": "Chiamato dai locali il \"vapore di Portofino\", il Genova era una nave da carico costruta nel 1904 in Inghilterra, a Newcastle Upon Tyne, di proprietà della Ilva (Alti Forni ed Acciaierie d'Italia S.A.) Al momento dell'affondamento, che avvenne il 27 Luglio 1917 davanti alla baia di Paraggi, il cargo stava trasportando da Genova a La Spezia un prezioso carico di cannoni e altro materiale bellico. L'agguato fu teso da un sommergibile tedesco, appostato nelle tranquille acque del Tigullio, che gli scagliò contro uno o più siluri colpendolo sotto la linea di galleggiamento, sul lato sinistro della prua. Il comandante riuscì ad avvicinarsi a terra, mentre la nave si appruava velocemente, così da permettere ai marinai di essere tratti in salvo dalle piccole imbarcazioni accorse in aiuto e, addirittura, ci fu chi raggiunse la terraferma a nuoto. Ci fu solo una vittima, un marinaio che si trovava vicino al luogo dell'esplosione del siluro. Ci vollero ben 8 ore prima che la nave affondasse completamente e da una famosa e rara foto d'epoca, di cui il nostro diving conserva gelosamente una copia, si può notare come il luogo dell'affondamento non sia in realtà quello dove giace attualmente il relitto. Esso risulta infatti molto più al largo e rimane un mistero come abbia fatto a scarrocciare così tanto; si ipotizza che dell'aria sia rimasta intrappolata nello scafo favorendone il galleggiamento e che le correnti sul fondo abbiano fatto il resto.",
+  "geo_coordinate": {
+    "latitude": "44.316111",
+    "longitude": "9.125000",
+    "elevation": null
+  },
+  "max_depth": "60",
+  "min_depth": "48",
+  "visibility": "3",
+  "current": "0",
+  "badges": [
+    "wreck"
+  ]
+}

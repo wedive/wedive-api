@@ -32,6 +32,11 @@ trait DiveTrait
     protected $badges;
 
     /**
+     * @var array
+     */
+    protected $diveType;
+
+    /**
      * beach or sea
      *
      * @var string
@@ -135,6 +140,24 @@ trait DiveTrait
     public function setStartPointDive($startPointDive)
     {
         $this->startPointDive = $startPointDive;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getDiveType()
+    {
+        return $this->diveType;
+    }
+
+    /**
+     * @param array $diveType
+     * @return $this
+     */
+    public function setDiveType($diveType)
+    {
+        $this->diveType = $diveType;
         return $this;
     }
 }

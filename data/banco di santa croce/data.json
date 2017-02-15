@@ -1,0 +1,16 @@
+{
+  "name": "Banco di santa croce",
+  "description": "l Banco di Santa Croce , "zona di tutela biologica" istituita nel 1993 è costituito da cinque grandi pinnacoli rocciosi . Le pareti, più o meno scoscese, a seconda dei diversi versanti, raggiungono circa 50 m. di profondità. Superati i primi 7-8 m di profondità si apre agli occhi dei subacquei uno scenario di una bellezza difficilmente immaginabile, per un tratto di mare così prossimo alla foce del fiume Sarno. Invece è proprio l'apporto dei nutrienti del fiume insieme all'oscurità (dovuta al primo strato di acqua torbida) a creare un ambiente perfetto per lo sviluppo di una rigogliosa vita di organismi sciafili. Gorgonie rosse e gialle e Axinelle cannabina fanno capolino già nei primi 18 m. Ad una maggore profondità aumenta la concentrazione di gorgonie, spesso ricoperte da uova di gattuccio, scenario quasi unico nel mediterraneo. Oltre i 30 m, si aprono alla vista del subacqueo grandi rami di Gerardia savaglia e negli innumerevoli anfratti si nascondono gattucci e grossi gronchi. Circumnavigando il pinnacolo principale, troviamo una grande spaccatura verticale che taglia in due la parete, dove la luce filtrando dall’alto attraversa l’intreccio dei rami di gorgonie, regalando ai sub uno scenario davvero suggestivo. Non mancano grosse cernie e banchi di dentici, e con un po' di fortuna si possono vedere librarsi nel blu esemplari di razze ormai stanziali. A volte, durante le eventuali soste di decompressione, non è raro vedere sfrecciare, nei periodi di passo, ricciole, palamiti e lampughe.",
+  "geo_coordinate": {
+    "latitude": "40.68083",
+    "longitude": "14.43556",
+    "elevation": null
+  },
+  "max_depth": "50",
+  "min_depth": "33",
+  "visibility": "4",
+  "current": "3",
+  "badges": [
+    "wreck"
+  ]
+}

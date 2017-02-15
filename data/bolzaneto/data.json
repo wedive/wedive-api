@@ -1,0 +1,16 @@
+{
+  "name": "Bolzanetto",
+  "description": "Piroscafo da carico armato di nazionalità italiana varato nel 1918 apparteneva alla Società Ilva di Genova. Il 29 Giugno 1943, durante la seconda Guerra Mondiale, mentre era in navigazione da Apuania (Marina di Carrara) diretto a Genova con un carico di "pani" di ghisa imbarcati il giorno prima nello stabilimento Ilva di Portoferraio, fu colpito e affondato al largo di Bonassola, da due siluri del sommergibile britannico Sportsman classe "S". Undici membri dell'equipaggio vi persero la vita e nove furono i superstiti, compreso il comandante tal Giuseppe Mazzei. Il relitto giace spezzato in due tronconi ad una profondità di circa 55 metri. La parte di poppa è insabbiata a livello delle stive e sollevata di diversi metri all'estremità, assumendo una posizione obliqua rispetto al fondale che permette di ammirare la grande elica e l'intera pala del timone. Qui sulla coperta troneggia il cannone a canna singola e si distingue il sistema di congegni per manovrare il timone. Questa parte permette una facile penetrazione grazie al cedimento della coperta in legno del ponte. Percorrendo l'ampio locale sotto il cannone si scorgono i proiettili e numerosi utensili, probabilmente l'officina di bordo.",
+  "geo_coordinate": {
+    "latitude": "44.17417",
+    "longitude": "9.56472",
+    "elevation": null
+  },
+  "max_depth": "55",
+  "min_depth": "40",
+  "visibility": "3",
+  "current": "3",
+  "badges": [
+    "wreck"
+  ]
+}
