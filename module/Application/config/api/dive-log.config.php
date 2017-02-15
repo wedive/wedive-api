@@ -130,7 +130,7 @@ return [
                         'name' => 'between',
                         'break_chain_on_failure' => true,
                         'options' => [
-                            'min' => 1,
+                            'min' => 0,
                             'max' => 5
                         ]
                     ]

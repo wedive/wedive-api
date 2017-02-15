@@ -92,6 +92,9 @@ return [
                 'require' => true,
                 'allow_empty' => false
             ],
+            "min_depth" => [
+                'name' => 'min_depth',
+            ],
             'current' => [
                 'name' => 'current',
                 'require' => true,
@@ -128,6 +131,23 @@ return [
             ],
             "max_depth" => [
                 'name' => 'max_depth',
+                'require' => false,
+                'allow_empty' => true,
+                'validators' => [
+                    0 => [
+                        'name' => 'digits'
+                    ],
+                    1 => [
+                        'name' => 'between',
+                        'options' => [
+                            'min' => 0,
+                            'max' => 200
+                        ]
+                    ],
+                ],
+            ],
+            "min_depth" => [
+                'name' => 'min_depth',
                 'require' => false,
                 'allow_empty' => true,
                 'validators' => [
