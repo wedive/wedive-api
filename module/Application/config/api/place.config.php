@@ -92,9 +92,6 @@ return [
                 'require' => true,
                 'allow_empty' => false
             ],
-            "min_depth" => [
-                'name' => 'min_depth',
-            ],
             'current' => [
                 'name' => 'current',
                 'require' => true,

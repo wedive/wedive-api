@@ -1,0 +1,2 @@
+WORKING_PATH = $(shell pwd)/..
+WORKING_DIR = api-prod
