@@ -4,6 +4,7 @@ namespace Application\Place\Hydrator\Mongo;
 use Application\Place\Hydrator\Mongo\Strategy\GeoStrategy;
 use Matryoshka\Model\Hydrator\Strategy\HasManyStrategy;
 use Matryoshka\Model\Hydrator\Strategy\HasOneStrategy;
+use Matryoshka\Model\Hydrator\Strategy\SetTypeStrategy;
 use Strapieno\Place\Model\Entity\Object\GeoCoordinateObject;
 use Strapieno\Place\Model\Hydrator\Mongo\PlaceModelMongoHydrator as BasePlaceModelMongoHydrator;
 use Strapieno\PlaceGallery\Model\Entity\Reference\GalleryReference;
@@ -55,6 +56,10 @@ class PlaceModelMongoHydrator extends BasePlaceModelMongoHydrator
         $strategy = new StateStrategy();
         $strategy->setFirstStateName('validating');
         $this->addStrategy('state', $strategy);
+        $this->addStrategy('current', new SetTypeStrategy('int', 'int'));
+        $this->addStrategy('visibility', new SetTypeStrategy('int', 'int'));
+        $this->addStrategy('max_depth', new SetTypeStrategy('int', 'int'));
+        $this->addStrategy('min_depth', new SetTypeStrategy('int', 'int'));
 
         $this->addStrategy(
             'user_reference',
