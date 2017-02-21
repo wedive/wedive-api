@@ -30,12 +30,12 @@ return [
     ],
     'session_save_handler_mongo' => [
         'hosts' => 'mongo:27017',
-        'database'   => 'strapieno-sessions',
+        'database'   => 'wedives-sessions',
         'collection' => 'sessions',
     ],
     'zf-oauth2' => [
-        'mongo' => [
-            'dsn' => 'mongo:27017',
+        'storage_settings' => [
+            'identity_field' => 'email'
         ],
         // https://apigility.org/documentation/auth/authentication-oauth2
         'options' => [
@@ -45,7 +45,42 @@ return [
     ],
     'mongodb' => [
         'Mongo\Db' => [
-            'database' => 'strapieno',
+            'database' => 'wedives',
+        ],
+    ],
+    'router' => [
+        'routes' => [
+            'client' => [
+                'type' => 'Hostname',
+                'options' => [
+                    'route' => 'www.wedives.com',
+                ],
+                'may_terminate' => true,
+                'child_routes' => [
+                    'confirm-email' => [
+                        'type' => 'Segment',
+                        'options' => [
+                            'route' => '/confirm-email/:token',
+                        ],
+                    ],
+                    'reset-password' => [
+                        'type' => 'Segment',
+                        'options' => [
+                            'route' => '/reset-password/:token',
+                        ],
+                    ]
+                ]
+            ]
+        ]
+    ],
+    'mailman' => [
+        'MailMan\Service\MailInterface' => [
+            'additional_info' => [
+            ],
+            'transport' => [
+                'type' => 'mandrill',
+                'options' => [],
+            ],
         ],
     ],
 ];

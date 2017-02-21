@@ -1,6 +1,8 @@
 <?php
 namespace Application\Place\Entity;
 
+use Strapieno\Utils\Model\Object\Collection;
+
 /**
  * Interface DiveInterface
  */
@@ -37,6 +39,16 @@ interface DiveInterface
     public function setVisibility($visibility);
 
     /**
+     * @return int
+     */
+    public function getCurrent();
+
+    /**
+     * @param int $current
+     * @return $this
+     */
+    public function setCurrent($current);
+    /**
      * @return array
      */
     public function getBadges();
@@ -45,4 +57,26 @@ interface DiveInterface
      * @param array $badges
      */
     public function setBadges($badges);
+
+    /**
+     * @return string
+     */
+    public function getStartPointDive();
+
+    /**
+     * @param string $startPointDive
+     * @return $this
+     */
+    public function setStartPointDive($startPointDive);
+
+    /**
+     * @return array
+     */
+    public function getDiveType();
+
+    /**
+     * @param array $diveType
+     * @return $this
+     */
+    public function setDiveType($diveType);
 }

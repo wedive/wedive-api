@@ -1,29 +1,46 @@
-#########################################
-# 	     Variabiles                 #
-#########################################
+# Include
+include config.mk
 
-# Dev mod
-COMPOSER_DEV =
-# Cliend id 
-CLIENT_ID = strapieno-admin
+## Tasks:
+help:
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
-ADMIN_USERNAME = admin
-ADMIN_EMAIL = admin@strapieno.it
+## install-composer-docker : Donwload compoer from docker hub
+install-composer-docker:
+	docker pull composer;
 
-# start download pre setup
-install-composer:
-	docker pull composer/composer;	
+## composer-update-docker : Run composer update form docker
+composer-update-docker:
+	docker run --rm -v $(PWD):/app composer update --prefer-dist -o $(COMPOSER_IGNORE_REQ) $(COMPOSER_DEV)
 
-# star setup platform
-composer:
-	docker run --rm -v $(PWD):/app composer/composer update --ignore-platform-reqs --prefer-dist -o $(COMPOSER_DEV)
+## composer-update : Run composer update form docker
+composer-update:
+	composer update --prefer-dist -o $(COMPOSER_IGNORE_REQ) $(COMPOSER_DEV)
 
-dcu:
-	docker-compose up -d
+## git-checkout-tag : Checkout tag of repository
+git-checkout-tag:
+	@git fetch --all --tags --prune
+	@git tag
+	@read -p "Insert tag:" tag; \
+	git checkout tags/$$tag
 
-test:dcu
-	docker exec -it skeleton_fpm_1 bash -c 'cd /var/www/str-skeleton && vendor/bin/phpunit'
-
-install: install-composer dcu
-	docker exec -it skeleton_fpm_1 bash -c 'cd str-skeleton && php ./vendor/bin/str-user-model.php add-user --username=${ADMIN_USERNAME} --email=${ADMIN_EMAIL}'
-	docker exec -it skeleton_fpm_1 bash -c 'cd str-skeleton && php ./vendor/bin/str-auth-model.php add-client --clientId=${CLIENT_ID} OauthClient'
+## deploy-prod : Deploy tool for production
+deploy-prod: composer-update git-checkout-tag
+	@rsync -avh ./ ${WORKING_PATH}/${WORKING_DIR} \
+     		--delete \
+     		--exclude 'data' \
+     		--exclude 'tests' \
+     		--exclude '.git' \
+     		--exclude '.idea' \
+     		--exclude 'docker' \
+     		--exclude '.gitignore' \
+     		--exclude 'composer.json' \
+     		--exclude 'composer.lock' \
+     		--exclude 'composer.phar' \
+     		--exclude 'config.mk' \
+     		--exclude 'config.mk.dist' \
+     		--exclude 'docker-compose.yml' \
+     		--exclude 'docker-compose.yml.dist' \
+     		--exclude 'Makefile' \
+     		--exclude 'phpunit.xml.dist' \
+     		--exclude 'README.md'

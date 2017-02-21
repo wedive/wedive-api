@@ -1,0 +1,19 @@
+{
+  "name": "Punta chiappa",
+  "description": "Chi si è immerso a Punta Chiappa, spingendosi sino alla grotta dei gamberi, in condizioni di buona visibilità, avrà sicuramente notato, e magari anche esplorato, la grande secca davanti alla parete con la quale forma uno dei più suggestivi canion del Promontorio. Il cappello della secca si trova a circa 32 metri, tutt'intorno la profondità è compresa tra i 40 e i 50 metri. Le pendici di questa grande formazione roccciosa sono attraversate da profonde spaccature ricche di corallo, qui trovano spesso rifugio musdee, crostacei, gronghi, murene e talvolta dei gattucci, come dimostrano le molteplici uova attaccate ai grandi ventagli di gorgonia rossa.",
+  "geo_coordinate": {
+    "latitude": "44.32183",
+    "longitude": "9.14569",
+    "elevation": null
+  },
+  "max_depth": "50",
+  "min_depth": "0",
+  "visibility": "3",
+  "current": "3",
+  "badges": [
+    "wall",
+    "rock",
+    "arckeo",
+    "cave"
+  ]
+}

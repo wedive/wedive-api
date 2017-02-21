@@ -1,0 +1,20 @@
+{
+  "name": "Aereo B26 Marauder",
+  "description": "Si trova nella baia della Torre spagnola di Bari Sardo, adagiato a circa 12 m di profondità. Si tratta di un caccia bombardiere americano della seconda guerra mondiale. L' immersione su questo relitto è relativamente semplice. Sono ancora visibili le ali, che hanno un'apertura di circa 20 m, e la carlinga; mentre la coda viene coperta o scoperta a seconda delle mareggiate. Nessuna possibilità di penetrazione all'interdo del relitto",
+  "geo_coordinate": {
+    "latitude": 39.833145,
+    "longitude": 9.685777
+  },
+  "aggregate_rating": {
+    "partial": null,
+    "rating_count": null,
+    "review_count": null
+  },
+  "max_depth": 12,
+  "max_depth": 10,
+  "visibility": "3",
+  "current": "1",
+  "badges": [
+    "wreck"
+  ]
+}

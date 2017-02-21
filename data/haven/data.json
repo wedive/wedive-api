@@ -1,0 +1,16 @@
+{
+  "name": "Amoco Mildord Haven",
+  "description": "La petroliera Amoco Mildford Haven, in seguito ribattezzata Haven, quarta di una serie di quattro navi gemelle, fu costruita presso i cantieri Asterillos Espanoles di Cadiz (Spagna). La petroliera, del tipo VLCC (Very Large Crude Carrier, ossia nave cisterna di grandissime dimensioni adibita al trasporto di greggio) aveva una portata lorda di 232.166 tonnellate, una lunghezza fuori tutto di 344 mt ed una larghezza di 51 mt. per un dislocamento a pieno carico di 267.500 tonnellate. L'11 aprile 1991, durante le operazioni di travaso del greggio dalle cisterne laterali a quelle centrali, al largo della città di Genova, si verificarono una serie di esplosioni che portarono all’incendio del carico. Nel pomeriggio dello stesso giorno l’incendio si estese anche alla sovrastruttura poppiera, quindi alle acque immediatamente circostanti su cui si era sparso il greggio fuoriuscito in seguito alle esplosioni. Il 12 aprile la nave in fiamme venne agganciata da un rimorchiatore e trainata verso costa, al largo di Arenzano (GE). Durante le operazioni di traino, il relitto si spezzò: il troncone di prua, lungo circa 95 m, affondò senza apparenti spandimenti di greggio su un fondale di circa 480 m nella posizione: 008° 41’ 18.83”E; 44° 16’ 22.42”E. La parte poppiera della nave affondò alla ore 10:05 del 14 aprile 1991 al largo di Arenzano su fondali di circa 80 m nel punto: 008° 41’ 59.58”E; 44° 22’ 25.75”N. relitto Haven © Portofino Divers Il relitto giace oggi in assetto di navigazione ed è interamente visitabile, sia in lunghezza (circa 150 mt) che in penetrazione (6 ponti e la sala macchine). La coperta, che si trova a circa -54 mt di profondità, termina con un taglio verticale, frastagliato, di tutta la parte prodiera, che rende possibile l'accesso a prua, da 60 a 80 metri, dell'intera smisurata cavità interna, larga 52 metri e alta 20 metri. La penetrazione avviene in completa oscurità, all'interno degli enormi serbatoi di stoccaggio del petrolio, che sono divisi in grandi camere. Nel corso degli anni la sezione poppiera sita dietro il castello che ospita i grandi argani e le bitte di ancoraggio, ora fortemente inclinate di 50 gradi verso l'interno, è gradualmente collassata: la coperta si inclina qui verso il centro della poppa, implodendo e formando una depressione che raggiunge ormai i 61 metri al punto centrale poppiero, in corrispondenza della verticale del timone. L'estrema punta della prua, posatasi a 470 metri di profondità a seguito del distacco avvenuto il 12 aprile 1991 durante le operazioni di rimorchio è ovviamente inaccessibile.",
+  "geo_coordinate": {
+    "latitude": "44.37382",
+    "longitude": "8.69988",
+    "elevation": null
+  },
+  "max_depth": "80",
+  "min_depth": "36",
+  "visibility": "4",
+  "current": "3",
+  "badges": [
+    "arckeo"
+  ]
+}

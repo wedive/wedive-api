@@ -1,0 +1,16 @@
+{
+  "name": "Punta torretta",
+  "description": "Il fondale prospiciente la punta è cosparso di grossi massi che formano pareti, tetti e anfratti. Le gigantesche gorgonie rosse (Paramuricea clavata) si alternano alle spugne, tipiche degli ambienti profondi (Aplysina aerophoba), dal giallo intenso, qui tutto è all'ennesima potenza dalle dimensioni alla concentrazione degli organismi che vi abitano. I grandi scogli sono disposti tra ponente e levante ad una profondità compresa tra i 45 e i 55 metri circa, suscitando l'imbarazzo della scelta nel percorso da seguire per cercare di esplorare ogni angolo di questo meraviglioso fondale. Purtroppo non potremo continuare l'escursione verso gli ultimi massi a ponente, per non oltrepassare il limite della zona A ( riserva integrale ) e incorrere in severe sanzioni. Abbandonato il fondo, si raggiungono le quote inferiori, sempre costellate di interessanti massi e anfratti, tra cui degno di nota è un meraviglioso tetto, intorno ai 35 metri, interamente foderato da corallo rosso di grande effetto. Sulla via del ritorno, ritroveremo la famosa parete della Torretta, che tenuta alla propria sinistra ci guiderà al punto di risalita.",
+  "geo_coordinate": {
+    "latitude": "44.31255",
+    "longitude": "9.16772",
+    "elevation": null
+  },
+  "max_depth": "50",
+  "min_depth": "0",
+  "visibility": "4",
+  "current": "1",
+  "badges": [
+    "rock"
+  ]
+}

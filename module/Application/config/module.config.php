@@ -1,6 +1,27 @@
 <?php
+use Strapieno\Utils\InputFilter\ArrayInput;
+use Zend\InputFilter\InputFilter;
+use Zend\InputFilter\Input;
 
 return [
+    'service_manager' => [
+        'factories' => [
+            'Zend\I18n\Translator\Translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',
+        ],
+        'aliases' => [
+            'translator' => 'Zend\I18n\Translator\Translator',
+        ]
+    ],
+    'translator' => [
+        'locale' => 'it_IT',
+        'translation_file_patterns' => [
+            [
+                'base_dir' => __DIR__ . '/../language',
+                'type'     => 'phpArray',
+                'pattern'  => '%s.php',
+            ],
+        ],
+    ],
     'imgman-apigility' => [
         'imgman-connected' => [
             'Strapieno\PlaceGallery\Api\V1\Rest\ConnectedResource' => [
@@ -14,8 +35,9 @@ return [
             'Strapieno\Utils\InputFilter\InputFilterAbstractServiceFactory',
         ],
         'invokables' => [
-            'Zend\InputFilter\InputFilter' => 'Zend\InputFilter\InputFilter',
-            'Zend\InputFilter\Input' => 'Zend\InputFilter\Input'
+            InputFilter::class => InputFilter::class,
+            ArrayInput::class =>  ArrayInput::class,
+            Input::class => Input::class
         ]
     ],
     'view_manager'          => [

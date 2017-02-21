@@ -1,0 +1,12 @@
+<?php /** @var $user \Strapieno\Utils\Model\Entity\IdentityExistAwareInterface */ ?>
+<?= $this->partial('email/layout/header'); ?>
+    <p>
+        Benvenuto su WEDIVES il portare per gli appasionati di subacqua.
+    </p>
+    <p>
+        Per completare la tua registrazione e avere la possibilità di mantenere il tuo log delle immersioni in modo facile e veloce <a style="text-decoration: none; color:#FFC107;" href="<?= $this->url('client/confirm-email', ['token' => $user->getIdentityExistToken()]); ?>">clicca qui</a>
+    </p>
+    <p>
+        Buon Mare!
+    </p>
+<?= $this->partial('email/layout/footer'); ?>

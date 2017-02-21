@@ -18,6 +18,17 @@ This is the api set of wedive
 127.0.0.69      wedive-api
 ```
 
+## Remember
+
+manual mongo import:
+```
+mongoexport --db wedives_image --collection place-gallery --out data/db/wedives-gallery.json
+
+mongoimport --db wedives --collection user --file path-to-json
+mongoimport --db wedives --collection place --file path-to-json
+mongoimport --db wedives_image --collection place-cover --file path-to-json
+```
+
 ## Build
 
 * 

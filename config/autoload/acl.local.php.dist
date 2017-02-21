@@ -1,0 +1,25 @@
+<?php
+return [
+    'aclman_storage' => [
+        'Strapieno\Auth\AclMan\Storage' => [
+            'roles' => [
+                // Permission for all roles
+                \AclMan\Storage\StorageInterface::ALL_ROLES => [
+                    'resources' => [
+                        \AclMan\Storage\StorageInterface::ALL_RESOURCES => [
+                            [
+                                'allow' => false,
+                            ],
+                        ],
+                    ]
+                ],
+                // Role diver
+                'diver' => [
+                    'parents' => [
+                        'guest'
+                    ],
+                ],
+            ],
+        ],
+    ],
+];

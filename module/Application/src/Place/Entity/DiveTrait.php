@@ -22,9 +22,26 @@ trait DiveTrait
     protected $visibility;
 
     /**
+     * @var int
+     */
+    protected $current;
+
+    /**
      * @var array
      */
     protected $badges;
+
+    /**
+     * @var array
+     */
+    protected $diveType;
+
+    /**
+     * beach or sea
+     *
+     * @var string
+     */
+    protected $startPointDive;
 
     /**
      * @return int
@@ -75,6 +92,24 @@ trait DiveTrait
     }
 
     /**
+     * @return int
+     */
+    public function getCurrent()
+    {
+        return $this->current;
+    }
+
+    /**
+     * @param int $current
+     * @return $this
+     */
+    public function setCurrent($current)
+    {
+        $this->current = $current;
+        return $this;
+    }
+
+    /**
      * @return array
      */
     public function getBadges()
@@ -88,5 +123,41 @@ trait DiveTrait
     public function setBadges($badges)
     {
         $this->badges = $badges;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStartPointDive()
+    {
+        return $this->startPointDive;
+    }
+
+    /**
+     * @param string $startPointDive
+     * @return $this
+     */
+    public function setStartPointDive($startPointDive)
+    {
+        $this->startPointDive = $startPointDive;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getDiveType()
+    {
+        return $this->diveType;
+    }
+
+    /**
+     * @param array $diveType
+     * @return $this
+     */
+    public function setDiveType($diveType)
+    {
+        $this->diveType = $diveType;
+        return $this;
     }
 }

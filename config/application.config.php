@@ -32,8 +32,13 @@ return array(
         'Strapieno\UserCheckIdentity\Api',
         'Strapieno\Place\Model',
         'Strapieno\Place\Api',
+        'Strapieno\PlaceCover\Model',
+        'Strapieno\PlaceCover\Api',
         'Strapieno\PlaceGallery\Model',
         'Strapieno\PlaceGallery\Api',
+        'Strapieno\DiveLog\Model',
+        'Strapieno\DiveLog\Api',
+        'MailMan',
         'Application',
     ),
     'module_listener_options' => array(

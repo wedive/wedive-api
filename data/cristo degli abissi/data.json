@@ -1,0 +1,16 @@
+{
+  "name": "Cristo degli abissi",
+  "description": "Posata nelle acque del borgo di San Fruttuoso nel 1954, per iniziativa di Duilio Marcante, figura leggendaria della subacquea italiana, la statua del Cristo degli Abissi, è diventata un simbolo per tutti i subacquei e una delle immersioni più famose del mondo. La statua di bronzo alta 2,50 Mt. ( nel crogiolo vennero fuse medaglie di marinai, di atleti, parti di navi, campane e cannoni) pesa 260 kg. e poggia su un grande basamento di cemento adagiato su un fondale di 17 Mt. Le mani della statua si trovano circa dieci metri di profondità mentre il basamento sfiora i sedici metri. La sua figura può essere facilmente raggiunta in apnea o essere ammirata dalla superficie con una maschera subacquea. Per consentire a tutti di ammirare la statua, anche in condizioni di mare non buone, il 13 agosto 1974 una copia del cristo è stata collocata nella cappella della Chiesa di San Fruttuoso.",
+  "geo_coordinate": {
+    "latitude": "44.31352",
+    "longitude": "9.17506",
+    "elevation": null
+  },
+  "max_depth": "15",
+  "min_depth": "10",
+  "visibility": "4",
+  "current": "0",
+  "badges": [
+    "arckeo"
+  ]
+}

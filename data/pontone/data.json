@@ -1,0 +1,15 @@
+{
+  "name": "Il Pontone",
+  "description": "Relitto di una vecchia piattafora in legno per la manutenzione delle barche nel porto di Arbatax. Adagiato su fondale sabbioso a profondità non troppo elevate, è una bella esperienza per amanti dei relitti: flora e fauna si sono impossessate dei resti con colori e forme affascinanti. Non è possibile la penetrazione.",
+  "geo_coordinate": {
+    "latitude": 39.949215,
+    "longitude": 9.727038  },
+  "aggregate_rating": {
+    "partial": null,
+    "rating_count": null,
+    "review_count": null
+  },
+  "max_depth": 35,
+  "visibility": 3,
+  "badges": null
+}
