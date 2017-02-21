@@ -15,7 +15,7 @@ composer-update-docker:
 
 ## composer-update : Run composer update form docker
 composer-update:
-	sudo ./composer.phar update --prefer-dist -o $(COMPOSER_IGNORE_REQ) $(COMPOSER_DEV)
+	sudo ./composer update --prefer-dist -o $(COMPOSER_IGNORE_REQ) $(COMPOSER_DEV)
 
 ## git-checkout-tag : Checkout tag of repository
 git-checkout-tag:
